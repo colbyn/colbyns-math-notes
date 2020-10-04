@@ -528,13 +528,56 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <header id=root>
     <span>Navigation</span>
     <ul>
-        <li><a href="/index.html">Homepage</a></li>
+        <!-- <li><a href="/index.html">Homepage</a></li>
         <li><a href="/trig.html">Trigonometry</a></li>
         <li><a href="/calc.html">Calculus</a></li>
         <li><a href="/calc/limits.html">Calculus - Limits</a></li>
         <li><a href="/calc/lines.html">Calculus - Lines</a></li>
-        <li><a href="/calc/derivatives.html">Calculus - Derivatives</a></li>
+        <li><a href="/calc/derivatives.html">Calculus - Derivatives</a></li> -->
     </ul>
+    <script>
+        const pages = [
+            {
+                name: 'Homepage',
+                path: 'index.html'
+            },
+            {
+                name: 'Trigonometry',
+                path: 'trig.html'
+            },
+            {
+                name: 'Calculus',
+                path: 'calc.html'
+            },
+            {
+                name: 'Calculus - Limits',
+                path: '/calc/limits.html'
+            },
+            {
+                name: 'Calculus - Lines',
+                path: '/calc/lines.html'
+            },
+            {
+                name: 'Calculus - Derivatives',
+                path: '/calc/derivatives.html'
+            },
+        ];
+        let ul_node = document.querySelector("header#root > ul");
+        console.assert(ul_node);
+        let li_nodes = [];
+        let host = window.location.host;
+        for (page of pages) {
+            let node = document.createElement("li");
+            let link = "";
+            if (host === "colbyn.github.io") {
+                link = `https://colbyn.github.io/colbyns-math-notes/${page.path}`;
+            } else {
+                link = `/${page.path}`;
+            }
+            node.innerHTML = `<a href=${link}>${page.name}</a>`;
+            ul_node.appendChild(node);
+        }
+    </script>
 </header>
 </div>
 </div>
