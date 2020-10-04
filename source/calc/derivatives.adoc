@@ -1,4 +1,4 @@
-// :autofit-option:
+:sectanchors:
 :stem: latexmath
 :toc:
 

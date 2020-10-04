@@ -1,0 +1,30 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Foundational Concepts
+
+ifeval::["{docname}{outfilesuffix}" == "concepts.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+
+== Difference between stem:[\mathrm{d}y], stem:[\Delta y]
+- https://www.quora.com/What-is-the-difference-between-dy-del-y-and-delta-y/answer/Buddha-Buck[What is the difference between dy, del y and delta y]
+
+[latexmath]
+++++
+include::assets/delta-y-vs-dy.tex[]
+++++
+
+
+== Maximum and Minimum Values
+
+- An absolute maximum or minimum is sometimes called a global maximum or minimum.
+- The maximum and minimum values of stem:[f] are called extreme values of stem:[f].
+
+
+
