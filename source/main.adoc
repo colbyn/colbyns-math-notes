@@ -1,0 +1,16 @@
+// :autofit-option:
+:stem: latexmath
+:toc:
+:doctype: book
+// :ascii-ids:
+// :showcomments:
+
+= Colbyn's Math Notes
+
+- link:trig[Trigonometry]
+- link:calc[Calculus]
+
+
+////
+Always end files with a blank line to avoid include problems.
+////
