@@ -7,6 +7,14 @@
 
 = Colbyn's Math Notes
 
+.Locations
+****
+|===
+| Source Code | https://github.com/colbyn/colbyns-math-notes/[github.com/colbyn/colbyns-math-notes]
+| Online Edition | https://colbyn.github.io/colbyns-math-notes//[colbyn.github.io/colbyns-math-notes/]
+|===
+****
+
 - link:trig[Trigonometry]
 - link:calc[Calculus]
 

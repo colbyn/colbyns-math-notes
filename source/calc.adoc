@@ -4,14 +4,7 @@
 
 
 = Colbyn's Calculus Notes
-
-.Locations
-****
-|===
-| Source Code | https://github.com/colbyn/colbyns-calculus-notes[GitHub.com/colbyn/colbyns-calculus-notes]
-| Online Edition | https://colbyn.github.io/colbyns-calculus-notes/[Colbyn.GitHub.io/colbyns-calculus-notes]
-|===
-****
+- link:main[Main]
 
 == Limits
 
