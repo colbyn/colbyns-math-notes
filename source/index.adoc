@@ -8,10 +8,9 @@
 |===
 ****
 
-== Subject
-
-- link:trig[Trigonometry]
-- link:calc[Calculus]
+++++
+include::assets/navigation.htm[]
+++++
 
 
 ////

@@ -1,0 +1,105 @@
+:stem: latexmath
+:toc:
+
+= Lines
+
+ifeval::["{docname}{outfilesuffix}" == "lines.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+
+
+== Tangent Line
+
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+y - y_1 &= f^\prime(x_1)(x-x_1) \\
+y &= mx + b
+\end{split}
+\end{equation}
+++++
+
+.More succinctly
+****
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+y &= f(a) + f^\prime(a)(x - a)
+\end{split}
+\end{equation}
+++++
+
+At a given point latexmath:[x = a].
+****
+
+.Example
+****
+For example, given latexmath:[f(x) = x^3 + 3x^2], and asked to find the tangent like at latexmath:[x = 1]:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+f(x) &= x^3 + 3x^2 \\
+y &= f(1) + f^\prime(1)(x - 1) \\
+  &= 4 + 9(x - 1) \\
+  &= 9x - 5
+\end{split}
+\end{equation}
+++++
+
+Therefore, the tangent line at latexmath:[x = 1] is latexmath:[y = 9x - 5].
+****
+
+
+=== Alternative Overview
+
+[latexmath]
+++++
+y = mx + b
+++++
+
+Generally, there are three things you will need when given some latexmath:[f(x)]:
+
+* The value of latexmath:[x] (usually provided to you)
+* The value of latexmath:[y] or latexmath:[f(x)] (if it's not provided to you, just plug it in)
+* The value of m (i.e. the slope, such as the value from latexmath:[f^\prime(x)])
+* Once you have latexmath:[m], then solve for latexmath:[b] by plugging in some latexmath:[(x, y)] into your latexmath:[y = mx + b] equation.
+
+
+== Normal Lines
+- https://www.desmos.com/calculator/ybtppzvv1a[Desmos Example of Normal Lines]
+
+The slope of the normal line is the negative reciprocal of the slope of the tangent line. Everything else is the same as the tangent line.
+
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+y - y_1 &= -\frac{1}{f^\prime(x_1)} (x-x_1) \\
+y &= -\frac{1}{m}x + b
+\end{split}
+\end{equation}
+++++
+
+
+== Perpendicular Lines
+
+The same as the Normal Lines. According to these https://www.quora.com/What-is-the-differences-between-normal-and-perpendicular[Quora answers]:
+
+----
+A normal makes an angle of 90° with a 2 dimensional SURFACE
+while,
+A perpendicular makes an angle of 90° with a one dimensional LINE.
+----
+
+----
+Basically perpendicular relates to line and normal relates to a plane,but both make 90° with their respective counterparts. The later is a vector quantity, where the former is scalar.
+----
+
+
+

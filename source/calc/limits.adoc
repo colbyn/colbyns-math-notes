@@ -1,0 +1,43 @@
+// :autofit-option:
+:stem: latexmath
+:toc:
+
+
+= Limits
+
+ifeval::["{docname}{outfilesuffix}" == "limits.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+
+== Limits of Trigonometric Functions
+
+General reference:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\lim_{x \to a} \sin(x) &= \sin(a) \\
+\lim_{x \to a} \cos(x) &= \cos(a) \\
+\lim_{x \to a} \tan(x) &= \tan(a) \\
+\lim_{x \to a} \csc(x) &= \csc(a) \\
+\lim_{x \to a} \sec(x) &= \sec(a) \\
+\lim_{x \to a} \cot(x) &= \cot(a)
+\end{split}
+\end{equation}
+++++
+
+Others:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\lim_{x \to 0} \frac{\sin(x)}{x} &= 1 \\
+\lim_{x \to 0} \frac{1 - \cos(x)}{x} &= 0 \\
+\end{split}
+\end{equation}
+++++
+
+

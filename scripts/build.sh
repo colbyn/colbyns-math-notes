@@ -27,16 +27,7 @@ mkdir -p $OUT_DIR/config
 bundle exec asciidoctor \
     -r asciidoctor-diagram \
     -D $OUT_DIR \
-    $SRC_DIR/*.adoc
+    -R $SRC_DIR \
+    '**/*.adoc'
 fi
 
-if $BUILD_PDF; then
-echo "builing pdf"
-bundle exec asciidoctor-pdf \
-    -a pdf-themesdir=config -a pdf-theme=basic -a showtitle \
-    -r asciidoctor-mathematical -a mathematical-format=svg \
-    -D $OUT_DIR \
-    $SRC_DIR/*.adoc
-rm -f $SRC_DIR/stem-*.png
-rm -f $SRC_DIR/stem-*.svg
-fi

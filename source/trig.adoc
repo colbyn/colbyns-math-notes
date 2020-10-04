@@ -2,7 +2,13 @@
 :stem: latexmath
 :toc:
 
-= Colbyn's Trigonometry Notes | link:index[Index]
+= Colbyn's Trigonometry Notes
+
+ifeval::["{docname}{outfilesuffix}" == "trig.html"]
+++++
+include::assets/navigation.htm[]
+++++
+endif::[]
 
 == Functional Utilities
 
