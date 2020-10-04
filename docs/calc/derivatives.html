@@ -510,14 +510,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <header id=root>
     <span>Navigation</span>
-    <ul>
-        <!-- <li><a href="/index.html">Homepage</a></li>
-        <li><a href="/trig.html">Trigonometry</a></li>
-        <li><a href="/calc.html">Calculus</a></li>
-        <li><a href="/calc/limits.html">Calculus - Limits</a></li>
-        <li><a href="/calc/lines.html">Calculus - Lines</a></li>
-        <li><a href="/calc/derivatives.html">Calculus - Derivatives</a></li> -->
-    </ul>
+    <ul></ul>
     <script>
         const pages = [
             {
@@ -533,6 +526,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 path: 'calc.html'
             },
             {
+                name: 'Calculus - Concepts',
+                path: 'calc/concepts.html'
+            },
+            {
                 name: 'Calculus - Limits',
                 path: 'calc/limits.html'
             },
@@ -543,6 +540,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             {
                 name: 'Calculus - Derivatives',
                 path: 'calc/derivatives.html'
+            },
+            {
+                name: 'Calculus - Definitions',
+                path: 'calc/definitions.html'
             },
         ];
         let ul_node = document.querySelector("header#root > ul");
@@ -565,7 +566,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_overview">Overview</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="stemblock">
 <div class="content">
@@ -579,10 +580,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_formal_limit_definition_of_a_derivative">Formal Limit Definition of A Derivative</h2>
+<h2 id="_formal_limit_definition_of_a_derivative"><a class="anchor" href="#_formal_limit_definition_of_a_derivative"></a>Formal Limit Definition of A Derivative</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_example">Example</h3>
+<h3 id="_example"><a class="anchor" href="#_example"></a>Example</h3>
 <div class="paragraph">
 <p><strong>Derivative of \(f(x)=|x|\) using the formal limit definition of a derivative</strong>:</p>
 </div>
@@ -640,7 +641,7 @@ f^\prime(x) &amp;= \frac{|x|}{x}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_derivative_continuity">Derivative Continuity</h2>
+<h2 id="_derivative_continuity"><a class="anchor" href="#_derivative_continuity"></a>Derivative Continuity</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Is a derivative continuous at \(x = a\)?</p>
@@ -665,9 +666,9 @@ f^\prime(x) &amp;= \frac{|x|}{x}
 <p>therefore the derivative is continuous and differentiable at \(x = a\).</p>
 </div>
 <div class="sect2">
-<h3 id="_continuous_piecewise_function">Continuous Piecewise Function</h3>
+<h3 id="_continuous_piecewise_function"><a class="anchor" href="#_continuous_piecewise_function"></a>Continuous Piecewise Function</h3>
 <div class="sect3">
-<h4 id="_example_2">Example</h4>
+<h4 id="_example_2"><a class="anchor" href="#_example_2"></a>Example</h4>
 <div class="paragraph">
 <p>Is this function differentiable at \(x = 2\)?</p>
 </div>
@@ -714,7 +715,7 @@ f^\prime(x) &amp;= \frac{|x|}{x}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_derivatives_of_trigonometric_functions">Derivatives of Trigonometric Functions</h2>
+<h2 id="_derivatives_of_trigonometric_functions"><a class="anchor" href="#_derivatives_of_trigonometric_functions"></a>Derivatives of Trigonometric Functions</h2>
 <div class="sectionbody">
 <div class="stemblock">
 <div class="content">
@@ -737,7 +738,7 @@ f^\prime(x) &amp;= \frac{|x|}{x}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-04 11:46:14 -0600
+Last updated 2020-10-04 17:27:31 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">

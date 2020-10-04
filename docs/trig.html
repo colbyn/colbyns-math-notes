@@ -527,14 +527,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <header id=root>
     <span>Navigation</span>
-    <ul>
-        <!-- <li><a href="/index.html">Homepage</a></li>
-        <li><a href="/trig.html">Trigonometry</a></li>
-        <li><a href="/calc.html">Calculus</a></li>
-        <li><a href="/calc/limits.html">Calculus - Limits</a></li>
-        <li><a href="/calc/lines.html">Calculus - Lines</a></li>
-        <li><a href="/calc/derivatives.html">Calculus - Derivatives</a></li> -->
-    </ul>
+    <ul></ul>
     <script>
         const pages = [
             {
@@ -550,6 +543,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 path: 'calc.html'
             },
             {
+                name: 'Calculus - Concepts',
+                path: 'calc/concepts.html'
+            },
+            {
                 name: 'Calculus - Limits',
                 path: 'calc/limits.html'
             },
@@ -560,6 +557,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             {
                 name: 'Calculus - Derivatives',
                 path: 'calc/derivatives.html'
+            },
+            {
+                name: 'Calculus - Definitions',
+                path: 'calc/definitions.html'
             },
         ];
         let ul_node = document.querySelector("header#root > ul");
@@ -582,7 +583,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_functional_utilities">Functional Utilities</h2>
+<h2 id="_functional_utilities"><a class="anchor" href="#_functional_utilities"></a>Functional Utilities</h2>
 <div class="sectionbody">
 <div class="stemblock">
 <div class="content">
@@ -617,7 +618,7 @@ Essentially, this is useful for reducing parentheses.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unit_conversion">Unit Conversion</h2>
+<h2 id="_unit_conversion"><a class="anchor" href="#_unit_conversion"></a>Unit Conversion</h2>
 <div class="sectionbody">
 <div class="stemblock">
 <div class="content">
@@ -698,12 +699,12 @@ x \; rad = x \cdot \frac{360^{\circ}}{\tau}
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tricks_using_modular_arithmetic">Tricks using modular arithmetic</h2>
+<h2 id="_tricks_using_modular_arithmetic"><a class="anchor" href="#_tricks_using_modular_arithmetic"></a>Tricks using modular arithmetic</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_simplifying_angles_greater_than_tau_or_360circ">Simplifying Angles greater than \(\tau\) or \(360^{\circ}\).</h3>
+<h3 id="_simplifying_angles_greater_than_tau_or_360circ"><a class="anchor" href="#_simplifying_angles_greater_than_tau_or_360circ"></a>Simplifying Angles greater than \(\tau\) or \(360^{\circ}\).</h3>
 <div class="sect3">
-<h4 id="_using_degrees">Using Degrees</h4>
+<h4 id="_using_degrees"><a class="anchor" href="#_using_degrees"></a>Using Degrees</h4>
 <div class="paragraph">
 <p>In the following examples I believe the correct phrase is <strong>co-terminal</strong>, and is only equal when discarding excess turns.
 So consider the following equal signs as “functionally equal” (in the case of periodic functions).</p>
@@ -752,10 +753,10 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_pythagorean_identity_notes">Pythagorean Identity Notes</h2>
+<h2 id="_pythagorean_identity_notes"><a class="anchor" href="#_pythagorean_identity_notes"></a>Pythagorean Identity Notes</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_given">Given</h3>
+<h3 id="_given"><a class="anchor" href="#_given"></a>Given</h3>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
@@ -767,7 +768,7 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_then_therefore">Then therefore</h3>
+<h3 id="_then_therefore"><a class="anchor" href="#_then_therefore"></a>Then therefore</h3>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
@@ -781,7 +782,7 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_likewise">Likewise</h3>
+<h3 id="_likewise"><a class="anchor" href="#_likewise"></a>Likewise</h3>
 <div class="paragraph">
 <p><strong>From here the other two "Pythagorean Identities" can be easily derived:</strong></p>
 </div>
@@ -813,7 +814,7 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_trigonometric_identities_reference">Trigonometric Identities Reference</h2>
+<h2 id="_trigonometric_identities_reference"><a class="anchor" href="#_trigonometric_identities_reference"></a>Trigonometric Identities Reference</h2>
 <div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
@@ -973,10 +974,10 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_trigonometric_identities">Using Trigonometric Identities</h2>
+<h2 id="_using_trigonometric_identities"><a class="anchor" href="#_using_trigonometric_identities"></a>Using Trigonometric Identities</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_sum_and_difference_identity_application_e_g_1">Sum and Difference Identity Application | E.g. 1</h3>
+<h3 id="_sum_and_difference_identity_application_e_g_1"><a class="anchor" href="#_sum_and_difference_identity_application_e_g_1"></a>Sum and Difference Identity Application | E.g. 1</h3>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
@@ -1002,7 +1003,7 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sum_and_difference_identity_application_e_g_2">Sum and Difference Identity Application | E.g. 2</h3>
+<h3 id="_sum_and_difference_identity_application_e_g_2"><a class="anchor" href="#_sum_and_difference_identity_application_e_g_2"></a>Sum and Difference Identity Application | E.g. 2</h3>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
@@ -1018,7 +1019,7 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties_of_trigonometric_functions">Properties of Trigonometric Functions</h2>
+<h2 id="_properties_of_trigonometric_functions"><a class="anchor" href="#_properties_of_trigonometric_functions"></a>Properties of Trigonometric Functions</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Domain and Range of Trigonometric Functions</caption>
@@ -1124,7 +1125,7 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_graphing_trigonometric_functions">Graphing Trigonometric Functions</h2>
+<h2 id="_graphing_trigonometric_functions"><a class="anchor" href="#_graphing_trigonometric_functions"></a>Graphing Trigonometric Functions</h2>
 <div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
@@ -1142,10 +1143,10 @@ For example, to simplify \(-990^{\circ}\):</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_concepts">Concepts</h2>
+<h2 id="_concepts"><a class="anchor" href="#_concepts"></a>Concepts</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_section_two">Section Two</h3>
+<h3 id="_section_two"><a class="anchor" href="#_section_two"></a>Section Two</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1368,9 +1369,9 @@ find other trig values given e.g. \(\sin \theta = \frac{3}{5}\), then e.g. find 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_section_three">Section Three</h3>
+<h3 id="_section_three"><a class="anchor" href="#_section_three"></a>Section Three</h3>
 <div class="sect3">
-<h4 id="_exam_hints">Exam Hints</h4>
+<h4 id="_exam_hints"><a class="anchor" href="#_exam_hints"></a>Exam Hints</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1385,7 +1386,7 @@ find other trig values given e.g. \(\sin \theta = \frac{3}{5}\), then e.g. find 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-04 11:26:19 -0600
+Last updated 2020-10-04 17:27:43 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">

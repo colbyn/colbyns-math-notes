@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Lines</title>
+<title>Foundational Concepts</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,17 +438,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Lines</h1>
+<h1>Foundational Concepts</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_tangent_line">Tangent Line</a>
-<ul class="sectlevel2">
-<li><a href="#_alternative_overview">Alternative Overview</a></li>
-</ul>
-</li>
-<li><a href="#_normal_lines">Normal Lines</a></li>
-<li><a href="#_perpendicular_lines">Perpendicular Lines</a></li>
+<li><a href="#_difference_between_mathrmdy_delta_y">Difference between \(\mathrm{d}y\), \(\Delta y\)</a></li>
+<li><a href="#_maximum_and_minimum_values">Maximum and Minimum Values</a></li>
 </ul>
 </div>
 </div>
@@ -561,106 +556,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tangent_line"><a class="anchor" href="#_tangent_line"></a>Tangent Line</h2>
-<div class="sectionbody">
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-y - y_1 &amp;= f^\prime(x_1)(x-x_1) \\
-y &amp;= mx + b
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">More succinctly</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-y &amp;= f(a) + f^\prime(a)(x - a)
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p>At a given point \(x = a\).</p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Example</div>
-<div class="paragraph">
-<p>For example, given \(f(x) = x^3 + 3x^2\), and asked to find the tangent like at \(x = 1\):</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-f(x) &amp;= x^3 + 3x^2 \\
-y &amp;= f(1) + f^\prime(1)(x - 1) \\
-  &amp;= 4 + 9(x - 1) \\
-  &amp;= 9x - 5
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p>Therefore, the tangent line at \(x = 1\) is \(y = 9x - 5\).</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_alternative_overview"><a class="anchor" href="#_alternative_overview"></a>Alternative Overview</h3>
-<div class="stemblock">
-<div class="content">
-\[y = mx + b\]
-</div>
-</div>
-<div class="paragraph">
-<p>Generally, there are three things you will need when given some \(f(x)\):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The value of \(x\) (usually provided to you)</p>
-</li>
-<li>
-<p>The value of \(y\) or \(f(x)\) (if it&#8217;s not provided to you, just plug it in)</p>
-</li>
-<li>
-<p>The value of m (i.e. the slope, such as the value from \(f^\prime(x)\))</p>
-</li>
-<li>
-<p>Once you have \(m\), then solve for \(b\) by plugging in some \((x, y)\) into your \(y = mx + b\) equation.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_normal_lines"><a class="anchor" href="#_normal_lines"></a>Normal Lines</h2>
+<h2 id="_difference_between_mathrmdy_delta_y"><a class="anchor" href="#_difference_between_mathrmdy_delta_y"></a>Difference between \(\mathrm{d}y\), \(\Delta y\)</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://www.desmos.com/calculator/ybtppzvv1a">Desmos Example of Normal Lines</a></p>
+<p><a href="https://www.quora.com/What-is-the-difference-between-dy-del-y-and-delta-y/answer/Buddha-Buck">What is the difference between dy, del y and delta y</a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>The slope of the normal line is the negative reciprocal of the slope of the tangent line. Everything else is the same as the tangent line.</p>
 </div>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
 \begin{split}
-y - y_1 &amp;= -\frac{1}{f^\prime(x_1)} (x-x_1) \\
-y &amp;= -\frac{1}{m}x + b
+    \Delta y &amp;= f(x + \Delta x) - f(x) \\
+    \mathrm{d}y &amp;= f^{\prime}(x) \cdot \mathrm{d}x
 \end{split}
 \end{equation}\]
 </div>
@@ -668,29 +578,24 @@ y &amp;= -\frac{1}{m}x + b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_perpendicular_lines"><a class="anchor" href="#_perpendicular_lines"></a>Perpendicular Lines</h2>
+<h2 id="_maximum_and_minimum_values"><a class="anchor" href="#_maximum_and_minimum_values"></a>Maximum and Minimum Values</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The same as the Normal Lines. According to these <a href="https://www.quora.com/What-is-the-differences-between-normal-and-perpendicular">Quora answers</a>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>A normal makes an angle of 90° with a 2 dimensional SURFACE
-while,
-A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Basically perpendicular relates to line and normal relates to a plane,but both make 90° with their respective counterparts. The later is a vector quantity, where the former is scalar.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An absolute maximum or minimum is sometimes called a global maximum or minimum.</p>
+</li>
+<li>
+<p>The maximum and minimum values of \(f\) are called extreme values of \(f\).</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-04 17:27:36 -0600
+Last updated 2020-10-04 17:27:27 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">

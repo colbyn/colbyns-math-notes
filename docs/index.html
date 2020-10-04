@@ -512,14 +512,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <header id=root>
     <span>Navigation</span>
-    <ul>
-        <!-- <li><a href="/index.html">Homepage</a></li>
-        <li><a href="/trig.html">Trigonometry</a></li>
-        <li><a href="/calc.html">Calculus</a></li>
-        <li><a href="/calc/limits.html">Calculus - Limits</a></li>
-        <li><a href="/calc/lines.html">Calculus - Lines</a></li>
-        <li><a href="/calc/derivatives.html">Calculus - Derivatives</a></li> -->
-    </ul>
+    <ul></ul>
     <script>
         const pages = [
             {
@@ -535,6 +528,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
                 path: 'calc.html'
             },
             {
+                name: 'Calculus - Concepts',
+                path: 'calc/concepts.html'
+            },
+            {
                 name: 'Calculus - Limits',
                 path: 'calc/limits.html'
             },
@@ -545,6 +542,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             {
                 name: 'Calculus - Derivatives',
                 path: 'calc/derivatives.html'
+            },
+            {
+                name: 'Calculus - Definitions',
+                path: 'calc/definitions.html'
             },
         ];
         let ul_node = document.querySelector("header#root > ul");
