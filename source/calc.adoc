@@ -3,8 +3,7 @@
 :toc:
 
 
-= Colbyn's Calculus Notes
-- link:main[Main]
+= Colbyn's Calculus Notes | link:index[Index]
 
 == Limits
 
@@ -174,6 +173,38 @@ y &= mx + b
 \end{split}
 \end{equation}
 ++++
+
+.More succinctly
+****
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+y &= f(a) + f^\prime(a)(x - a)
+\end{split}
+\end{equation}
+++++
+
+At a given point latexmath:[x = a].
+****
+
+.Example
+****
+For example, given latexmath:[f(x) = x^3 + 3x^2], and asked to find the tangent like at latexmath:[x = 1]:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+f(x) &= x^3 + 3x^2 \\
+y &= f(1) + f^\prime(1)(x - 1) \\
+  &= 4 + 9(x - 1) \\
+  &= 9x - 5
+\end{split}
+\end{equation}
+++++
+
+Therefore, the tangent line at latexmath:[x = 1] is latexmath:[y = 9x - 5].
+****
 
 
 ==== Alternative Overview
