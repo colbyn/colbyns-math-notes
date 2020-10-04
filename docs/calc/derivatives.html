@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Colbyn&#8217;s Trigonometry Notes</title>
+<title>Derivatives</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,39 +438,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Colbyn&#8217;s Trigonometry Notes</h1>
+<h1>Derivatives</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_functional_utilities">Functional Utilities</a></li>
-<li><a href="#_unit_conversion">Unit Conversion</a></li>
-<li><a href="#_tricks_using_modular_arithmetic">Tricks using modular arithmetic</a>
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_formal_limit_definition_of_a_derivative">Formal Limit Definition of A Derivative</a>
 <ul class="sectlevel2">
-<li><a href="#_simplifying_angles_greater_than_tau_or_360circ">Simplifying Angles greater than \(\tau\) or \(360^{\circ}\).</a></li>
+<li><a href="#_example">Example</a></li>
 </ul>
 </li>
-<li><a href="#_pythagorean_identity_notes">Pythagorean Identity Notes</a>
+<li><a href="#_derivative_continuity">Derivative Continuity</a>
 <ul class="sectlevel2">
-<li><a href="#_given">Given</a></li>
-<li><a href="#_then_therefore">Then therefore</a></li>
-<li><a href="#_likewise">Likewise</a></li>
+<li><a href="#_continuous_piecewise_function">Continuous Piecewise Function</a></li>
 </ul>
 </li>
-<li><a href="#_trigonometric_identities_reference">Trigonometric Identities Reference</a></li>
-<li><a href="#_using_trigonometric_identities">Using Trigonometric Identities</a>
-<ul class="sectlevel2">
-<li><a href="#_sum_and_difference_identity_application_e_g_1">Sum and Difference Identity Application | E.g. 1</a></li>
-<li><a href="#_sum_and_difference_identity_application_e_g_2">Sum and Difference Identity Application | E.g. 2</a></li>
-</ul>
-</li>
-<li><a href="#_properties_of_trigonometric_functions">Properties of Trigonometric Functions</a></li>
-<li><a href="#_graphing_trigonometric_functions">Graphing Trigonometric Functions</a></li>
-<li><a href="#_concepts">Concepts</a>
-<ul class="sectlevel2">
-<li><a href="#_section_two">Section Two</a></li>
-<li><a href="#_section_three">Section Three</a></li>
-</ul>
-</li>
+<li><a href="#_derivatives_of_trigonometric_functions">Derivatives of Trigonometric Functions</a></li>
 </ul>
 </div>
 </div>
@@ -539,802 +522,171 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_functional_utilities">Functional Utilities</h2>
+<h2 id="_overview">Overview</h2>
 <div class="sectionbody">
 <div class="stemblock">
 <div class="content">
-\[\begin{equation}
-\begin{split}
-f \triangleleft x &amp;= f(x) \\
-x \triangleright f &amp;= f(x)
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p>Think of the arrows as denoting the order of evaluation
-E.g. pass this term to the function on the left, or pass this term to the function on the right of the arrow.
-Essentially, this is useful for reducing parentheses.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">For Example</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-\sin \triangleleft \frac{4}{12}\tau \;\displaystyle{\text{rad}} &amp;= -\frac{\sqrt{3}}{3} \\
-\sin \left(\frac{4}{12}\tau \;\displaystyle{\text{rad}} \right) &amp;= -\frac{\sqrt{3}}{3}
-\end{split}
-\end{equation}\]
-</div>
-</div>
+\[f^\prime(x) =
+\lim_{h \to 0} \frac{f(a + h) - f(a)}{h} =
+\lim_{x \to a} \frac{f(a) - f(x)}{a - x} =
+\frac{dy}{dx}f(x) =
+\frac{d}{dx}f(x)\]
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unit_conversion">Unit Conversion</h2>
-<div class="sectionbody">
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-\tau &amp;= 2\pi = 360^{\circ} \\
-\pi &amp;= \frac{1}{2}\tau = 180^{\circ}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-1^{\circ} = \frac{1}{360} \tau \; {\displaystyle {\text{rad}}} \\
-1 \; rad = \frac{1}{\tau} \cdot 360^{\circ}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p>So therefore:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-x^{\circ} = \frac{x}{360} \tau \; {\displaystyle {\text{rad}}} \\
-x \; rad = \frac{x}{\tau} \cdot 360^{\circ}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Take special note of the above.</strong> It essentially gives you a simple relation for conversion.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Or alternatively</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-x^{\circ} = x \cdot \frac{\tau}{360} \; {\displaystyle {\text{rad}}} \\
-x \; rad = x \cdot \frac{360^{\circ}}{\tau}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\[29^{\circ} = \frac{29}{360} \tau \; {\displaystyle {\text{rad}}}\]
-</div>
-</div>
-<div class="paragraph">
-<p>Or when expressed in terms of \(\pi\):</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-29^{\circ} &amp;= \frac{29}{360} \tau \; {\displaystyle {\text{rad}}} \\
-    &amp;= \frac{29}{360} (2\pi) \; {\displaystyle {\text{rad}}} \\
-    &amp;= \frac{29}{180} \pi \; {\displaystyle {\text{rad}}}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p>The above cannot be understated. Now you don&#8217;t need to compute a degree to radian measure.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tricks_using_modular_arithmetic">Tricks using modular arithmetic</h2>
+<h2 id="_formal_limit_definition_of_a_derivative">Formal Limit Definition of A Derivative</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_simplifying_angles_greater_than_tau_or_360circ">Simplifying Angles greater than \(\tau\) or \(360^{\circ}\).</h3>
+<h3 id="_example">Example</h3>
+<div class="paragraph">
+<p><strong>Derivative of \(f(x)=|x|\) using the formal limit definition of a derivative</strong>:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+f(x) &amp; = |x| \\
+f^\prime(a) &amp; = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \\
+     &amp; = \lim_{h \to 0} \frac{|a + h| - |a|}{h} \cdot \frac{|a + h| + |a|}{|a + h| + |a|} \\
+     &amp; = \lim_{h \to 0} \frac{|a + h|^2 - |a|^2}{h \cdot (|a + h| + |a|)} \\
+     &amp; = \lim_{h \to 0} \frac{(a + h)^2 - a^2}{h (|a + h| + |a|)} \\
+     &amp; = \lim_{h \to 0} \frac{a^2 + 2ah + h^2 - a^2}{h (|a + h| + |a|)} \\
+     &amp; = \lim_{h \to 0} \frac{2ah + h^2}{h (|a + h| + |a|)} \\
+     &amp; = \lim_{h \to 0} \frac{h \cdot (2a + h)}{h \cdot (|a + h| + |a|)} \\
+     &amp; = \lim_{h \to 0} \frac{2a + h}{|a + h| + |a|} \\
+     &amp; = \frac{2a + (0)}{|a + (0)| + |a|} \\
+     &amp; = \frac{2a}{|a| + |a|} \\
+     &amp; = \frac{2a}{2|a|} \\
+     &amp; = \frac{2a}{2|a|} \cdot \frac{|a|}{|a|} \\
+     &amp; = \frac{2a|a|}{2|a|^2} \\
+     &amp; = \frac{2a|a|}{2a^2} \\
+     &amp; = \frac{|a|}{a} \\
+f^\prime(x) &amp;= \frac{|x|}{x}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Derivative of \(f(x)=|x|\) using an alternative limit definition of a derivative</strong>:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+f(x) &amp; = |x| \\
+f^\prime(a) &amp; = \lim_{x \to a} \frac{f(a) - f(x)}{a - x} \\
+    &amp; = \lim_{x \to a} \frac{|a| - |x|}{a - x} \cdot \frac{|a| + |x|}{|a| + |x|} \\
+    &amp; = \lim_{x \to a} \frac{|a|^2 - |x|^2}{(a - x) \cdot (|a| + |x|)} \\
+    &amp; = \lim_{x \to a} \frac{(a)^2 - (x)^2}{(a - x) \cdot (|a| + |x|)} \\
+    &amp; = \lim_{x \to a} \frac{(a - x) \cdot (a + x)}{(a - x) \cdot (|a| + |x|)} \\
+    &amp; = \lim_{x \to a} \frac{a + x}{|a| + |x|} \\
+    &amp; = \frac{a + (a)}{|a| + |(a)|} \\
+    &amp; = \frac{2a}{2|a|} \\
+    &amp; = \frac{a}{|a|} \cdot \frac{|a|}{|a|} \\
+    &amp; = \frac{a|a|}{|a|^2} \\
+    &amp; = \frac{a|a|}{a^2} \\
+    &amp; = \frac{|a|}{a} \\
+f^\prime(x) &amp;= \frac{|x|}{x}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_derivative_continuity">Derivative Continuity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Is a derivative continuous at \(x = a\)?</p>
+</div>
+<div class="paragraph">
+<p>First we ensure:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\lim_{x \to a^{-}} f^\prime(x) = \lim_{x \to a^{+}} f^\prime(x) = \lim_{x \to a} f^\prime(x)\]
+</div>
+</div>
+<div class="paragraph">
+<p>then:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\lim_{x \to a} f^\prime(x) = f^\prime(a)\]
+</div>
+</div>
+<div class="paragraph">
+<p>therefore the derivative is continuous and differentiable at \(x = a\).</p>
+</div>
+<div class="sect2">
+<h3 id="_continuous_piecewise_function">Continuous Piecewise Function</h3>
 <div class="sect3">
-<h4 id="_using_degrees">Using Degrees</h4>
+<h4 id="_example_2">Example</h4>
 <div class="paragraph">
-<p>In the following examples I believe the correct phrase is <strong>co-terminal</strong>, and is only equal when discarding excess turns.
-So consider the following equal signs as “functionally equal” (in the case of periodic functions).</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Large Angles</div>
-<div class="paragraph">
-<p>Just use modular arithmetic to simplify angles greater than \(360^{\circ}\).
-For example, to simplify \(990^{\circ}\):</p>
+<p>Is this function differentiable at \(x = 2\)?</p>
 </div>
 <div class="stemblock">
 <div class="content">
-\[990 \mod 360 = 270\]
+\[f(x) =
+\begin{cases}
+    x^2 - 3 &amp; \text{if $x \lt 2$} \\
+    4x - 7 &amp; \text{if $x \ge 2$}
+\end{cases}\]
 </div>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Negative Angles</div>
-<div class="paragraph">
-<p>Just use modular arithmetic to simplify angles less than \(0\).
-For example, to simplify \(-990^{\circ}\):</p>
 </div>
 <div class="stemblock">
 <div class="content">
-\[-990 \mod 360 = 90\]
+\[f^\prime(x) =
+\begin{cases}
+    2x &amp; \text{if $x \lt 2$} \\
+    4 &amp; \text{if $x \ge 2$}
+\end{cases}\]
 </div>
 </div>
 <div class="paragraph">
-<p>so therefore:</p>
+<p>To check:</p>
 </div>
 <div class="stemblock">
 <div class="content">
-\[-990^{\circ} = 90^{\circ}\]
+\[\begin{equation}
+\begin{split}
+\lim_{x \to 2^{-}} f^\prime(x) &amp;= 2(2) = 4 \\
+\lim_{x \to 2^{+}} f^\prime(x) &amp;= 4 \\
+\text{therefore} \\
+\lim_{x \to 2} f^\prime(x) &amp;= 4 \\
+\text{then we check} \\
+\lim_{x \to 2} f^\prime(x) &amp;= f^\prime(2) \\
+\end{split}
+\end{equation}\]
 </div>
 </div>
 <div class="paragraph">
-<p>Note that I haven&#8217;t really used this all that much. Also it could be that this only applies to odd functions.</p>
-</div>
-</div>
+<p>Therefore the derivative is continuous and differentiable at \(x = 2\).</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_pythagorean_identity_notes">Pythagorean Identity Notes</h2>
+<h2 id="_derivatives_of_trigonometric_functions">Derivatives of Trigonometric Functions</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_given">Given</h3>
 <div class="stemblock">
 <div class="content">
-\[\begin{equation}
-\begin{split}
-\cos^2(\theta) + \sin^2(\theta) &amp;= 1
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_then_therefore">Then therefore</h3>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-\cos^2(\theta) + \sin^2(\theta) &amp;= 1 \\
-\sin^2(\theta) &amp;= 1 - \cos^2(\theta) \\
-\cos^2(\theta) &amp;= 1 - \sin^2(\theta)
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_likewise">Likewise</h3>
-<div class="paragraph">
-<p><strong>From here the other two "Pythagorean Identities" can be easily derived:</strong></p>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-\frac{\sin^2(\theta)}{\sin^2(\theta)} &amp;= 1 \\
-    &amp;= \frac{1 - \cos^2(\theta)}{\sin^2(\theta)} \\
-    &amp;= \frac{1}{\sin^2(\theta)} - \frac{\cos^2(\theta)}{\sin^2(\theta)} \\
-    &amp;= \csc^2(\theta) - \cot^2(\theta)
-\end{split}
-\end{equation}\]
-</div>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-\frac{\cos^2(\theta)}{\cos^2(\theta)} &amp;= 1 \\
-    &amp;= \frac{1 - \sin^2(\theta)}{\cos^2(\theta)} \\
-    &amp;= \frac{1}{\cos^2(\theta)} - \frac{\sin^2(\theta)}{\cos^2(\theta)} \\
-    &amp;= \sec^2(\theta) - \tan^2(\theta)
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_trigonometric_identities_reference">Trigonometric Identities Reference</h2>
-<div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Pythagorean Identities</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-\cos^2(\theta) + \sin^2(\theta) &amp;= 1 \\
-\sec^2(\theta) - \tan^2(\theta) &amp;= 1 \\
-\csc^2(\theta) - \cot^2(\theta) &amp;= 1
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Sum and Difference Identities</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-
-    \cos(\alpha - \beta) &amp;= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
-    \cos(\alpha + \beta) &amp;= \cos(\alpha) \cdot \cos(\beta) - \sin(\alpha) \cdot \sin(\beta) \\
-
-    &amp;\\
-
-    \sin(\alpha - \beta) &amp;= \sin(\alpha) \cdot \cos(\beta) - \cos(\alpha) \cdot \sin(\beta) \\
-    \sin(\alpha + \beta) &amp;= \sin(\alpha) \cdot \cos(\beta) + \cos(\alpha) \cdot \sin(\beta) \\
-
-    &amp;\\
-
-    \tan(\alpha + \beta) &amp;= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) \cdot \tan(\beta)} \\
-    \tan(\alpha - \beta) &amp;= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Cofunction Identities</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-    \sin(\theta) &amp;= \cos(\frac{1}{4}\tau - \theta) \\
-    \cos(\theta) &amp;= \sin(\frac{1}{4}\tau - \theta) \\
-    \tan(\theta) &amp;= \cot(\frac{1}{4}\tau - \theta) \\
-    &amp;\\
-    \cot(\theta) &amp;= \tan(\frac{1}{4}\tau - \theta) \\
-    \csc(\theta) &amp;= \sec(\frac{1}{4}\tau - \theta) \\
-    \sec(\theta) &amp;= \csc(\frac{1}{4}\tau - \theta)
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Double-Angle Identities</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Remember for Exams.</strong> The professor said this isn&#8217;t given during the Exam, and that we need to know this, said this in the context of Double-Angle &amp; Half-Angle Identities.</p>
-</li>
-<li>
-<p>The <strong>Double-Angle Identities</strong> are easy to derive from the <strong>Sum and Difference Identities</strong>.</p>
-</li>
-</ul>
-</div>
+\[\newcommand{\derivative}{{\scriptscriptstyle \frac{\mathrm{d}}{\mathrm{d}x}}\;}
 \begin{equation}
 \begin{split}
-    \sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
-    \cos(2\alpha) &= \cos^2(\alpha) - \sin^2(\alpha) \\
-                  &= 1 - 2\sin^2(\alpha) \\
-                  &= 2\cos^2(\alpha) - 1 \\
-    &\\
-    \tan(2\alpha) &= \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}
-\end{split}
-\end{equation}
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Half-Angle Identities</div>
-<div class="paragraph">
-<p><strong>Remember for Exams.</strong> The professor said this isn&#8217;t given during the Exam, and that we need to know this, said this in the context of Double-Angle &amp; Half-Angle Identities, she may have been talking about just the Double-Angle Identities.</p>
-</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-    \sin \frac{\alpha}{2} &amp;= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
-    \cos \frac{\alpha}{2} &amp;= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
-    \tan \frac{\alpha}{2} &amp;= \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}
-        = \frac{sin(\alpha)}{1 + \cos(\alpha)}
-        = \frac{1 - \cos(\alpha)}{sin(\alpha)}
+    \derivative \sin(x) &amp;= \cos(x) \\
+    \derivative \cos(x) &amp;= -\sin(x) \\
+    \derivative \tan(x) &amp;= \sec^2(x) \\
+    &amp;\\
+    \derivative \csc(x) &amp;= -\csc(x)\cot(x) \\
+    \derivative \sec(x) &amp;= \sec(x)\tan(x) \\
+    \derivative \cot(x) &amp;= -\csc^2(x)
 \end{split}
 \end{equation}\]
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The choice of the plus or minus sign depends on the quadrant in which \(\frac{\alpha}{2}\) lies.</strong></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Power-Reducing Identities</div>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-    \sin^2(\alpha) &amp;= \frac{1 - \cos(2\alpha)}{2} \\
-    &amp;\\
-    \cos^2(\alpha) &amp;= \frac{1 + \cos(2\alpha)}{2} \\
-    &amp;\\
-    \tan^2(\alpha) &amp;= \frac{1 - \cos(2\alpha)}{1 + \cos(2\alpha)}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Product-to-Sum Identities</div>
-\begin{equation}
-\begin{split}
-    \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
-    \cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
-    \cos(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \Big] \\
-    \sin(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \Big]
-\end{split}
-\end{equation}
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Sum-to-Product-Identities</div>
-\begin{equation}
-\begin{split}
-    \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
-    \cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
-    \sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
-    \cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
-\end{split}
-\end{equation}
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_trigonometric_identities">Using Trigonometric Identities</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_sum_and_difference_identity_application_e_g_1">Sum and Difference Identity Application | E.g. 1</h3>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-    {\displaystyle {\text{Given:}}}\\
-    30^\circ &amp;= \frac{1}{12}\tau \\
-    45^\circ &amp;= \frac{1}{8}\tau \\
-    \cos(\alpha + \beta) &amp;= \cos(\alpha) \cdot \cos(\beta) - \sin(\alpha) \cdot \sin(\beta) \\
-    &amp;\\
-    {\displaystyle {\text{Problem:}}}\\
-    \cos(75^\circ) &amp;= \cdots \\
-    &amp;\\
-    {\displaystyle {\text{Solution:}}}\\
-    \cos(75^\circ) &amp;= \cos(30^\circ + 45^\circ) \\
-        &amp;= \cos(30^\circ) \cdot \cos(45^\circ) - \sin(30^\circ) \cdot \sin(45^\circ) \\
-        &amp;= \cos(\frac{1}{12}\tau) \cdot \cos(\frac{1}{8}\tau) - \sin(\frac{1}{12}\tau) \cdot \sin(\frac{1}{8}\tau) \\
-        &amp;= \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} - \frac{1}{2} \cdot \frac{\sqrt{2}}{2} \\
-        &amp;= \frac{\sqrt{3} \sqrt{2}}{4} - \frac{\sqrt{2}}{4} \\
-        &amp;= \frac{\sqrt{3} \sqrt{2} - \sqrt{2}}{4}
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sum_and_difference_identity_application_e_g_2">Sum and Difference Identity Application | E.g. 2</h3>
-<div class="stemblock">
-<div class="content">
-\[\begin{equation}
-\begin{split}
-    \sin^2(10^\circ) + \sin^2(80^\circ)
-        &amp;= \sin^2(10^\circ) + \cos^2(10^\circ) \\
-        &amp;= 1
-\end{split}
-\end{equation}\]
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_properties_of_trigonometric_functions">Properties of Trigonometric Functions</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Domain and Range of Trigonometric Functions</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Function</th>
-<th class="tableblock halign-left valign-top">Domain</th>
-<th class="tableblock halign-left valign-top">Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\sin\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\((-\infty,\infty)\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\lbrack -1, 1 \rbrack\)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\cos\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\((-\infty,\infty)\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\lbrack -1, 1 \rbrack\)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\tan\)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\((-\infty,\infty)\)</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Domain and Range of Reciprocal Trigonometric Functions</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Function</th>
-<th class="tableblock halign-left valign-top">Domain</th>
-<th class="tableblock halign-left valign-top">Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\csc\)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\((-\infty,-1\rbrack\cup\lbrack 1, \infty)\)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\sec\)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\((-\infty,-1\rbrack\cup\lbrack 1, \infty)\)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\cot\)</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\((-\infty,\infty)\)</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Period of Trigonometric Functions</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Function</th>
-<th class="tableblock halign-left valign-top">Period</th>
-<th class="tableblock halign-left valign-top">Reciprocal Function</th>
-<th class="tableblock halign-left valign-top">Period</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\sin\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\tau\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\csc\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\tau\)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\cos\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\tau\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\sec\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\tau\)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\tan\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\frac{1}{2}\tau\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\cot\)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\(\frac{1}{2}\tau\)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_graphing_trigonometric_functions">Graphing Trigonometric Functions</h2>
-<div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Graphing Mistake</div>
-<div class="paragraph">
-<p>Made a graphing mistake on an Exam. By default, the period of the tangent function is \(\pi\), and it&#8217;s easiest to graph a single period within the asymptotes, such as from \(-\frac{1}{2}\pi\) to \(\frac{1}{2}\pi\), which is what I did, but didn&#8217;t update the labels with the halved period.</p>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="image1.svg" alt="image1" width="461" height="310">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_concepts">Concepts</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_section_two">Section Two</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>2.1:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Complement and Supplement</strong></p>
-</li>
-<li>
-<p><strong>Co-Terminal with given angle</strong></p>
-</li>
-<li>
-<p>DMS to equivalent decimal degree value.</p>
-</li>
-<li>
-<p><strong>Degree to exact radian measure</strong>.</p>
-</li>
-<li>
-<p><strong>Convert each radian measure to exact degree measure</strong>.</p>
-</li>
-<li>
-<p><strong>Find measure of the central angle of a circle subtended by a given arc.</strong></p>
-</li>
-<li>
-<p><strong>Find the length of an arc that subtends a central angle with the given measure in a circle with the given radius.</strong></p>
-</li>
-<li>
-<p>Applications:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Angular rotation of two pulleys.</strong></p>
-</li>
-<li>
-<p><strong>Angular speed.</strong></p>
-</li>
-<li>
-<p><strong>Linear speed of a car.</strong></p>
-</li>
-<li>
-<p><strong>Angle of rotation and distance.</strong></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.2:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Find measure of the 6 trig functions with the given sides.</strong></p>
-</li>
-<li>
-<p><strong>Given some \(\theta\) in a right triangle,
-find other trig values given e.g. \(\sin \theta = \frac{3}{5}\), then e.g. find \(\tan \theta\).</strong></p>
-</li>
-<li>
-<p>Use calculator to find value of a given trig function to some given decimal place.</p>
-</li>
-<li>
-<p>Triangle Relationships:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Vertical height from slant height</strong>.</p>
-</li>
-<li>
-<p><strong>Distance across a marsh</strong>.</p>
-</li>
-<li>
-<p><strong>Width of a lake</strong>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Multi Triangle Relationships:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Height of a Pyramid</strong>.</p>
-</li>
-<li>
-<p><strong>Height of a building</strong>.</p>
-</li>
-<li>
-<p><strong>Height of a tower</strong>.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.3:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Find value for each of the six trig functions for the angle whose terminal side passes through the given point.</strong></p>
-</li>
-<li>
-<p><strong>Evaluate the trig function of the quadrilateral angle, or state that the function is undefined.</strong></p>
-</li>
-<li>
-<p>**Given some \(\theta\) in standard position, state the quadrant in which the terminal side of \(\theta\) lies</p>
-</li>
-<li>
-<p><strong>Find the exact value of each expression.</strong></p>
-</li>
-<li>
-<p><strong>Find the measure of the reference angle \(\theta^\prime\) for the given angle \(\theta\).</strong></p>
-</li>
-<li>
-<p><strong>Use the Reference Angle Theorem  to find the exact value of each trig functions.</strong></p>
-</li>
-<li>
-<p>Use calculator to approximate the given trig function value to six significant digits.</p>
-</li>
-<li>
-<p>Fine the exact value of each expression.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.4:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Evaluate \(W(t)\) for each given \(t\).</p>
-</li>
-<li>
-<p><strong>Fine the exact value of each function</strong></p>
-</li>
-<li>
-<p>Use the unit circle to estimate the following values to the nearest tenth.</p>
-</li>
-<li>
-<p>Determinate whether the function is even, odd or neither.</p>
-</li>
-<li>
-<p>State the period of each function.</p>
-</li>
-<li>
-<p>Use the unit circle to verify each identity.</p>
-</li>
-<li>
-<p>Use trigonometric identities to write each expression in terms of a single trigonometric function or a constant.</p>
-</li>
-<li>
-<p>Use trigonometric identities to find the value of the function.</p>
-</li>
-<li>
-<p>Simplify the first expression to the second expression.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>2.5:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>State the amplitude and period of the function defined by each equation.</p>
-</li>
-<li>
-<p>Graph one full period of the function defined by each expression.</p>
-</li>
-<li>
-<p>Find an equation of the given graph.</p>
-</li>
-<li>
-<p>2.6:</p>
-</li>
-<li>
-<p>For which value of x is the given function undefined.</p>
-</li>
-<li>
-<p>State the period of each function.</p>
-</li>
-<li>
-<p>Sketch one full period of the graph of the given function.</p>
-</li>
-<li>
-<p>Find an equation for each line.</p>
-</li>
-<li>
-<p>Graph absolute value trig functions.</p>
-</li>
-<li>
-<p>2.6:</p>
-</li>
-<li>
-<p>Find the amplitude, phase shift and period for the graph of each function.</p>
-</li>
-<li>
-<p>Find the phase shift and period for the graph of the given function.</p>
-</li>
-<li>
-<p>Graph one fill period of the given function.</p>
-</li>
-<li>
-<p>Graph each function by using translations.</p>
-</li>
-<li>
-<p>Graph the given function by using the addition-of-ordinates method.</p>
-</li>
-<li>
-<p>Find an equation for each blue graph.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_section_three">Section Three</h3>
-<div class="sect3">
-<h4 id="_exam_hints">Exam Hints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>HW 3.2 #40</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
@@ -1342,7 +694,7 @@ find other trig values given e.g. \(\sin \theta = \frac{3}{5}\), then e.g. find 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-04 11:26:19 -0600
+Last updated 2020-10-04 11:46:14 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">

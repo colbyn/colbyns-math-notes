@@ -436,19 +436,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="book">
+<body class="article">
 <div id="header">
 <h1>Colbyn&#8217;s Math Notes</h1>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_subject">Subject</a></li>
-</ul>
-</div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Locations</div>
@@ -470,52 +462,70 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </table>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_subject">Subject</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="trig">Trigonometry</a></p>
-</li>
-<li>
-<p><a href="calc">Calculus</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
+<style>
+    header#root {
+        background-color: #ffffff47;
+        border-radius: 3px;
+        color: #000;
+        border: 1px solid #000;
+        font-weight: 700;
+        font-family: monospace;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    header#root > span {
+        border-bottom: 1px solid #000;
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    header#root > ul {
+        list-style: none;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border-left: 10px solid #2b2b2b;
+    }
+    header#root > ul > li {
+        color: inherit;
+        border-bottom: 1px solid #000;
+        width: 100%;
+        display: flex;
+    }
+    header#root > ul > li:last-child {
+        border-bottom: none;
+    }
+    header#root > ul > li:hover {
+        background-color: #212121;
+    }
+    header#root > ul > li > a {
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+        padding: 2px;
+    }
+    header#root > ul > li > a:hover {
+        color: #fff;
+    }
+</style>
+<header id=root>
+    <span>Navigation</span>
+    <ul>
+        <li><a href="/index.html">Homepage</a></li>
+        <li><a href="/trig.html">Trigonometry</a></li>
+        <li><a href="/calc.html">Calculus</a></li>
+        <li><a href="/calc/limits.html">Calculus - Limits</a></li>
+        <li><a href="/calc/lines.html">Calculus - Lines</a></li>
+        <li><a href="/calc/derivatives.html">Calculus - Derivatives</a></li>
+    </ul>
+</header>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-03 18:52:42 -0600
+Last updated 2020-10-04 11:35:23 -0600
 </div>
 </div>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  messageStyle: "none",
-  tex2jax: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
-    ignoreClass: "nostem|nolatexmath"
-  },
-  asciimath2jax: {
-    delimiters: [["\\$", "\\$"]],
-    ignoreClass: "nostem|noasciimath"
-  },
-  TeX: { equationNumbers: { autoNumber: "none" } }
-})
-MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
-  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
-    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains('stemblock')) {
-      data.math.root.display = "block"
-    }
-    return data
-  })
-})
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
