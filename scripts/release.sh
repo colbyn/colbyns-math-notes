@@ -1,5 +1,6 @@
+rm -rf docs
 mkdir -p docs
-cp output/main.html docs/index.html
-git add docs/index.html
+cp -r output docs
+git add docs
 git commit -m "publish changes online"
 git push
