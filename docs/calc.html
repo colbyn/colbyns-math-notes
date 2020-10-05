@@ -470,8 +470,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_definitions">Definitions</a>
 <ul class="sectlevel2">
-<li><a href="#_tangent">Tangent</a></li>
 <li><a href="#_secant_line">Secant line</a></li>
+<li><a href="#_tangent">Tangent</a></li>
 <li><a href="#_intermediate_value_theorem">Intermediate Value Theorem</a></li>
 <li><a href="#_maximum_and_minimum_values_2">Maximum and Minimum Values</a></li>
 <li><a href="#_the_mean_value_theorem">The Mean Value Theorem</a></li>
@@ -962,6 +962,29 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 <h2 id="_definitions"><a class="anchor" href="#_definitions"></a>Definitions</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="_secant_line"><a class="anchor" href="#_secant_line"></a>Secant line</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>In geometry, a secant of a curve is a line that intersects the curve at a minimum of two distinct points.[1] The word secant comes from the Latin word secare, meaning to cut. In the case of a circle, a secant will intersect the circle at exactly two points.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; <a href="https://en.wikipedia.org/wiki/Secant_line">Wikipedia:Secant_line</a>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    m &amp;= \frac{y_2 - y_1}{x_2 - x_1} \\
+      &amp;= \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_tangent"><a class="anchor" href="#_tangent"></a>Tangent</h3>
 <div class="quoteblock">
 <blockquote>
@@ -973,17 +996,13 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 &#8212; <a href="https://en.wikipedia.org/wiki/Tangent">Wikipedia:Tangent</a>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_secant_line"><a class="anchor" href="#_secant_line"></a>Secant line</h3>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>In geometry, a secant of a curve is a line that intersects the curve at a minimum of two distinct points.[1] The word secant comes from the Latin word secare, meaning to cut. In the case of a circle, a secant will intersect the circle at exactly two points.</p>
-</div>
-</blockquote>
-<div class="attribution">
-&#8212; <a href="https://en.wikipedia.org/wiki/Secant_line">Wikipedia:Secant_line</a>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    y &amp;= f(a) + f^\prime(a)(x - a)
+\end{split}
+\end{equation}\]
 </div>
 </div>
 </div>
@@ -1139,6 +1158,9 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 <div class="ulist">
 <ul>
 <li>
+<p><a href="https://www.dpmms.cam.ac.uk/~wtg10/meanvalue.html">What is the point of the mean value theorem?</a></p>
+</li>
+<li>
 <p>The mean value theorem says that the average speed of the car (the slope of the secant line) is equal to the instantaneous speed (slope of the tangent line) at some point(s) in the interval.</p>
 </li>
 </ul>
@@ -1208,6 +1230,13 @@ f attains the slope of the secant between a and b as the derivative at the point
 </li>
 <li>
 <p>\(f(a) = f(b)\)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>I.e. the \(x_1\) and \(x_2\) map to the same \(y\) value.</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
