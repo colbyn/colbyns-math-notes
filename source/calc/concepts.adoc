@@ -3,7 +3,7 @@
 :toc:
 
 
-= Foundational Concepts
+= Concepts
 
 ifeval::["{docname}{outfilesuffix}" == "concepts.html"]
 ++++
