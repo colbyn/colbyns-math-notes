@@ -10,13 +10,6 @@ include::../assets/navigation.htm[]
 ++++
 endif::[]
 
-== Tangent
-
-[quote, 'https://en.wikipedia.org/wiki/Tangent[Wikipedia:Tangent]']
-____
-In geometry, the tangent line (or simply tangent) to a plane curve at a given point is the straight line that "just touches" the curve at that point. Leibniz defined it as the line through a pair of infinitely close points on the curve. More precisely, a straight line is said to be a tangent of a curve y = f(x) at a point x = c on the curve if the line passes through the point (c, f(c)) on the curve and has slope f'(c), where f' is the derivative of f.
-____
-
 == Secant line
 
 [quote, 'https://en.wikipedia.org/wiki/Secant_line[Wikipedia:Secant_line]']
@@ -24,16 +17,83 @@ ____
 In geometry, a secant of a curve is a line that intersects the curve at a minimum of two distinct points.[1] The word secant comes from the Latin word secare, meaning to cut. In the case of a circle, a secant will intersect the circle at exactly two points.
 ____
 
-== Intermediate Value Theorem
+[latexmath]
+++++
+include::assets/secant-line.tex[]
+++++
+
+== Tangent
+
+[quote, 'https://en.wikipedia.org/wiki/Tangent[Wikipedia:Tangent]']
+____
+In geometry, the tangent line (or simply tangent) to a plane curve at a given point is the straight line that "just touches" the curve at that point. Leibniz defined it as the line through a pair of infinitely close points on the curve. More precisely, a straight line is said to be a tangent of a curve y = f(x) at a point x = c on the curve if the line passes through the point (c, f(c)) on the curve and has slope f'(c), where f' is the derivative of f.
+____
+
+
+[latexmath]
+++++
+include::assets/tangent-line.tex[]
+++++
+
+== The Limit of a Function (§1.5)
+
+.Vertical Asymptote (Definition §1.5.6)
+****
+The vertical line stem:[x = a] is called the **vertical asymptote** of the curve stem:[y = f(x)] if at least one of the following statements is true:
+
+[latexmath]
+++++
+include::assets/vertical-asymptote-cases.tex[]
+++++
+****
+
+== Continuity (§1.5)
+
+.The Intermediate Value Theorem (IVT)
+****
+Suppose that stem:[f] is continuous on the closed interval stem:[\lbrack a, b \rbrack], and let N be any number between stem:[f(a)] and stem:[f(b)], where stem:[f(a) \neq f(b)], then there exists a number stem:[c] in stem:[(a, b)] such that stem:[f(c) = N].
+
+Or alternatively, suppose stem:[f] is a function that is continuous at every point in the interval stem:[\lbrack a, b \rbrack]:
+
+- stem:[f] will take on every value between stem:[f(a)] and stem:[f(b)] over the interval.
+- For any L between the values stem:[f(a)] and stem:[f(b)], there exists a number stem:[c] in stem:[\lbrack a, b \rbrack] for which stem:[f(c) = L].
+
 
 [NOTE]
 ====
-The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.
+- The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.
+- The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values stem:[f(a)] and stem:[f(b)]. 
+- The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.
 ====
 
-The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.
+[TIP]
+====
+The IVT can be used to show that a root exists, if given some interval between stem:[a] and stem:[b]: 
 
-== Maximum and Minimum Values
+- stem:[f(a)] is negative
+- stem:[f(b)] is positive
+
+or
+
+- stem:[f(a)] is positive
+- stem:[f(b)] is negative
+
+then therefore, if the function is continuous, then there must be a value for which some stem:[x] in stem:[f(x) = 0] exists. I.e. that a root exists. Which should make sense.
+
+More generally, this can be extended to any value between some interval. For instance, if:
+
+- stem:[f(a) = 3]
+- stem:[f(b) = 9]
+
+Then there must exist some value of stem:[x] for which:
+
+- stem:[f(x) = 6]
+====
+****
+
+
+
+== Maximum and Minimum Values (§3.1)
 
 
 === The extreme Value Theorem
@@ -66,13 +126,15 @@ If f has a local maximum or minimum at c, then c is a critical number of f.
 
 A critical number of a function stem:[f] is a number stem:[c] in the domain of stem:[f] such that either stem:[f^\prime(c) = 0] or stem:[f^\prime(c)] does not exist.
 
+[NOTE]
+====
+* *Critical numbers* of stem:[f] occur when stem:[f^\prime(c) = 0], or when stem:[f^\prime(c) = \mathrm{undefined}].
+* Not every critical number gives rise to a maximum or a minimum.
+====
+
 
 To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. **See The Closed Interval Method.**
 
-[NOTE]
-====
-Not every critical number gives rise to a maximum or a minimum.
-====
 
 [#the-closed-interval-method]
 === The Closed Interval Method
@@ -82,7 +144,7 @@ Not every critical number gives rise to a maximum or a minimum.
 To find the absolute maximum and minimum values of a continuous function stem:[f] on a closed interval stem:[\lbrack a, b \rbrack]:
 
 1. Find the values of stem:[f] at the critical numbers of stem:[f] in stem:[(a, b)].
-    - I.e. *critical numbers* of stem:[f] occur when stem:[f^\prime(c) = 0],
+    - I.e. *critical numbers* of stem:[f] occur when stem:[f^\prime(c) = 0], or when stem:[f^\prime(c) = \mathrm{undefined}]
 2. Find the values of stem:[f] at the endpoints of the interval.
     - I.e. stem:[f(a)] and stem:[f(b)].
 3. The **largest** of the values from **Steps 1 and 2** is the absolute maximum value; the **smallest** of these values is the absolute minimum value.
@@ -101,8 +163,9 @@ Using sudo code, the <<The Closed Interval Method>> can be defined as the result
 \end{equation}
 ++++
 
-== The Mean Value Theorem
+== The Mean Value Theorem (§3.2)
 
+- https://www.dpmms.cam.ac.uk/~wtg10/meanvalue.html[What is the point of the mean value theorem?]
 - The mean value theorem says that the average speed of the car (the slope of the secant line) is equal to the instantaneous speed (slope of the tangent line) at some point(s) in the interval.
 
 [quote, 'https://en.wikipedia.org/wiki/Mean_value_theorem[Wikipedia:Mean_value_theorem]']
@@ -136,6 +199,7 @@ Let f be a function that satisfies the following three hypotheses:
 1. stem:[f] is continuous on the closed interval stem:[\lbrack a, b \rbrack].
 2. stem:[f] is differentiable on the open interval stem:[(a, b)].
 3. stem:[f(a) = f(b)]
+    * I.e. the stem:[x_1] and stem:[x_2] map to the same stem:[y] value.
 
 Then there is a number stem:[c] in stem:[(a, b)], such that stem:[f^\prime(c) = 0]
 ****
@@ -181,12 +245,12 @@ The Mean Value Theorem is an example of what is called an existence theorem. Lik
 
 === Miscellaneous
 
-.Theorem (5)
+.Theorem (§3.2.5)
 ****
 If stem:[f^\prime(x) = 0] for all x in an interval stem:[(a, b)], then f is constant on stem:[(a, b)].
 ****
 
-.Corollary (7)
+.Corollary (§3.2.7)
 ****
 if stem:[f^\prime(x) = g^\prime(x)] for all stem:[x] in an interval stem:[(a, b)], then stem:[f - g] is constant on stem:[(a, b)]; that is, stem:[f(x) = g(x) + c] where stem:[c] is a constant.
 
@@ -195,6 +259,7 @@ if stem:[f^\prime(x) = g^\prime(x)] for all stem:[x] in an interval stem:[(a, b)
 Corollary 7 says that if two functions have the same derivatives on an interval, then their graphs must be vertical translations of each other there. In other words, the graphs have the same shape, but could be shifted up or down.
 ====
 ****
+
 
 == How Derivatives Affect the Shape of a Graph
 

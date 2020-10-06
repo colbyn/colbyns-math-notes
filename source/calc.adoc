@@ -19,6 +19,7 @@ include::calc/limits.adoc[leveloffset=+1]
 include::calc/derivatives.adoc[leveloffset=+1]
 include::calc/lines.adoc[leveloffset=+1]
 include::calc/definitions.adoc[leveloffset=+1]
+include::calc/solutions.adoc[leveloffset=+1]
 
 
 

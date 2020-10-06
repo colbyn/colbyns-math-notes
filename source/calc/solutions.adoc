@@ -1,0 +1,20 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Solutions
+
+ifeval::["{docname}{outfilesuffix}" == "solutions.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+== Derivative of Absolute Value Functions (stem:[{\scriptscriptstyle \frac{\mathrm{d}}{\mathrm{d}x}}\; \lvert x \rvert])
+
+[latexmath]
+++++
+include::assets/derivative-of-abs-funs.tex[]
+++++
+
