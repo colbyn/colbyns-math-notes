@@ -128,14 +128,19 @@ The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universa
 
 .Identities for the Inverse Secant, Cosecant, and Cotangent Functions
 ****
-If stem:[-1 \leq x \leq 1] then:
+// If stem:[-1 \leq x \leq 1] then:
 
-- stem:[\csc^{-1}x = \sin^{-1}\frac{1}{x}]
-- stem:[\sec^{-1}x = \cos^{-1}\frac{1}{x}]
+// - stem:[\csc^{-1}x = \sin^{-1}\frac{1}{x}]
+// - stem:[\sec^{-1}x = \cos^{-1}\frac{1}{x}]
 
-If stem:[x] is a real number, then:
+// If stem:[x] is a real number, then:
 
-- stem:[\cot^{-1}x = \frac{\pi}{2} - \tan^{-1}x]
+// - stem:[\cot^{-1}x = \frac{\pi}{2} - \tan^{-1}x]
+
+[latexmath]
+++++
+include::assets/co-inverse-idents.tex[]
+++++
 ****
 
 .Composition of Trigonometric Functions and Their Inverses
@@ -148,58 +153,5 @@ include::assets/comp-of-inverse-funs.tex[]
 - Where stem:[x \in \mathbf{R}] means if x is any real number.
 ****
 
-.Composition of Trigonometric Functions and Their Inverses
-****
-If stem:[-1 \leq x \leq 1] then:
-[latexmath]
-++++
-\begin{equation}
-\begin{split}
-\sin \circ \arcsin \triangleleft x &= x
-\cos \circ \arccos \triangleleft x &= x
-\end{split}
-\end{equation}
-++++
-
-If stem:[x] is any real number, then:
-[latexmath]
-++++
-\begin{equation}
-\begin{split}
-\tan \circ \arctan \triangleleft x &= x
-\end{split}
-\end{equation}
-++++
-
-If stem:[-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}] then:
-[latexmath]
-++++
-\begin{equation}
-\begin{split}
-\arcsin \circ \sin \triangleleft x &= x
-\end{split}
-\end{equation}
-++++
-
-If stem:[0 \leq x \leq \pi] then:
-[latexmath]
-++++
-\begin{equation}
-\begin{split}
-\arccos \circ \cos \triangleleft x &= x
-\end{split}
-\end{equation}
-++++
-
-If stem:[-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}] then:
-[latexmath]
-++++
-\begin{equation}
-\begin{split}
-\arctan \circ \tan \triangleleft x &= x
-\end{split}
-\end{equation}
-++++
-****
 
 == §3.6 | Trigonometric Equations
