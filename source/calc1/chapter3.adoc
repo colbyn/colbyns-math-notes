@@ -15,17 +15,27 @@ endif::[]
 
 == §3.1 | Maximum and Minimum Values
 
-image::calc1/3.1.1a.png[Test]
-
-image::calc1/3.1.1b.png[Test]
-
-image::calc1/3.1.1c.png[Test]
-
 [NOTE]
 ====
-- An 'extremum' (or extreme value) of a function is a point at which a **maximum** or **minimum** value of the function is obtained in some interval. **I.e. is not an alternative phrase for absolute maximum, but more generally refers to maximum or minimum points.**
+- An **extremum** (or extreme value) of a function is a point at which a **maximum** or **minimum** value of the function is obtained in some interval.
 ====
 
+
+Consider Figure  3.1.1:
+
+image::calc1/3.1.1a.png[Figure A, float=left]
+image::calc1/3.1.1b.png[Figure B, float=left]
+image::calc1/3.1.1c.png[Figure C, float=left]
+
+ifdef::backend-html5[]
+++++
+<div style="clear: both;"></div>
+++++
+endif::[]
+
+- Figure (a) has a maximum, but no minimum, as the interval over which the function is defined is open.
+- Figure (b), the function has a minimum, but no maximum; there is a discontinuity in the "natural'' place for the maximum to occur.
+- Figure (c) has both a maximum and a minimum; note that the function is continuous and the interval on which it is defined is closed.
 
 
 === The extreme Value Theorem
@@ -107,18 +117,18 @@ ____
 
 For any function that is continuous on  stem:[\lbrack a, b \rbrack] and differentiable on stem:[(a,b)], there exists some stem:[c] in the interval stem:[(a,b)] such that the secant joining the endpoints of the interval stem:[\lbrack a, b \rbrack] is parallel to the tangent at stem:[c]:
 
-image::https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mvt2.svg/520px-Mvt2.svg.png[]
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mvt2.svg/520px-Mvt2.svg.png[Figure, 300, 300, align="center"]
 
 [NOTE]
 ====
 The function 
 f attains the slope of the secant between a and b as the derivative at the point stem:[{\displaystyle \xi \in (a,b)}]:
 
-image::https://upload.wikimedia.org/wikipedia/commons/9/94/Mittelwertsatz3.svg[]
+image::https://upload.wikimedia.org/wikipedia/commons/9/94/Mittelwertsatz3.svg[Figure, 300, 300]
 
 It is also possible that there are multiple tangents parallel to the secant:
 
-image::https://upload.wikimedia.org/wikipedia/commons/f/f9/Mittelwertsatz6.svg[]
+image::https://upload.wikimedia.org/wikipedia/commons/f/f9/Mittelwertsatz6.svg[Figure, 300, 300]
 ====
 
 
