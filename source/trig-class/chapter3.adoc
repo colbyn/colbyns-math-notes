@@ -50,7 +50,10 @@ include::assets/double-angle-ident.tex[]
 ++++
 include::assets/half-angle-ident.tex[]
 ++++
-**The choice of the plus or minus sign depends on the quadrant in which latexmath:[\frac{\alpha}{2}] lies.**
+[WARNING]
+====
+**The choice of the ± sign depends on the quadrant in which stem:[\frac{\alpha}{2}] lies.**
+====
 ****
 
 .Power-Reducing Identities
@@ -79,5 +82,124 @@ include::assets/sum-to-product-ident.tex[]
 
 == §3.5 | Inverse Trigonometric Functions
 
+.Definition of stem:[\arcsin(x)]
+****
+[latexmath]
+++++
+y = \arcsin(x)
+++++
+if and only if
+[latexmath]
+++++
+x = \sin(y)
+++++
+where
+[latexmath]
+++++
+-1 \leq x \leq 1 \\
+-\frac{\pi}{2} \leq y \leq \frac{\pi}{2}
+++++
+****
+
+.Definition of stem:[\arccos(x)]
+****
+[latexmath]
+++++
+y = \arccos(x)
+++++
+if and only if
+[latexmath]
+++++
+x = \cos(y)
+++++
+where
+[latexmath]
+++++
+-1 \leq x \leq 1 \\
+0 \leq y \leq \pi
+++++
+****
+
+
+[WARNING]
+====
+The choice of ranges for stem:[\arcsin(x)] and stem:[\arccos(x)] is not universally accepted.
+====
+
+.Identities for the Inverse Secant, Cosecant, and Cotangent Functions
+****
+If stem:[-1 \leq x \leq 1] then:
+
+- stem:[\csc^{-1}x = \sin^{-1}\frac{1}{x}]
+- stem:[\sec^{-1}x = \cos^{-1}\frac{1}{x}]
+
+If stem:[x] is a real number, then:
+
+- stem:[\cot^{-1}x = \frac{\pi}{2} - \tan^{-1}x]
+****
+
+.Composition of Trigonometric Functions and Their Inverses
+****
+[latexmath]
+++++
+include::assets/comp-of-inverse-funs.tex[]
+++++
+
+- Where stem:[x \in \mathbf{R}] means if x is any real number.
+****
+
+.Composition of Trigonometric Functions and Their Inverses
+****
+If stem:[-1 \leq x \leq 1] then:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\sin \circ \arcsin \triangleleft x &= x
+\cos \circ \arccos \triangleleft x &= x
+\end{split}
+\end{equation}
+++++
+
+If stem:[x] is any real number, then:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\tan \circ \arctan \triangleleft x &= x
+\end{split}
+\end{equation}
+++++
+
+If stem:[-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}] then:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\arcsin \circ \sin \triangleleft x &= x
+\end{split}
+\end{equation}
+++++
+
+If stem:[0 \leq x \leq \pi] then:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\arccos \circ \cos \triangleleft x &= x
+\end{split}
+\end{equation}
+++++
+
+If stem:[-\frac{\pi}{2} \leq x \leq \frac{\pi}{2}] then:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\arctan \circ \tan \triangleleft x &= x
+\end{split}
+\end{equation}
+++++
+****
 
 == §3.6 | Trigonometric Equations
