@@ -1,6 +1,6 @@
-./scripts/build.sh
+set -e
 rm -rf docs
-cp -r output docs
+./scripts/build.sh target-github
 git add docs
 git commit -m "publish changes online"
 git push

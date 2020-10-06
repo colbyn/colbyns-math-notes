@@ -1,7 +1,14 @@
-:imagesdir: ../../static/images
 :sectanchors:
 :stem: latexmath
 :toc:
+
+ifdef::env-github[]
+:imagesdir: https://colbyn.github.io/colbyns-math-notes/
+endif::[]
+
+ifndef::env-github[]
+:imagesdir: ../../static/images
+endif::[]
 
 
 = Chapter 3 | Applications of Differentiation 
