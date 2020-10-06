@@ -3,7 +3,7 @@
 :toc:
 
 ifdef::env-github[]
-:imagesdir: https://colbyn.github.io/colbyns-math-notes/
+:imagesdir: https://colbyn.github.io/colbyns-math-notes/static/images
 endif::[]
 
 ifndef::env-github[]
