@@ -1,0 +1,12 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 4 | Applications of Trigonometry
+
+ifeval::["{docname}{outfilesuffix}" == "chapter4.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]

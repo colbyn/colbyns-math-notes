@@ -1,0 +1,13 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 1 | Functions and Graphs
+
+ifeval::["{docname}{outfilesuffix}" == "chapter1.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+

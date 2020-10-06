@@ -1,0 +1,12 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 7 | Exponential and Logarithmic Functions
+
+ifeval::["{docname}{outfilesuffix}" == "chapter7.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]

@@ -1,0 +1,12 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 6 | Topics in Analytic Geometry
+
+ifeval::["{docname}{outfilesuffix}" == "chapter6.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]

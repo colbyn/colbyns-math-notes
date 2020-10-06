@@ -1,0 +1,83 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 3 | Trigonometric Identities and Equations
+
+ifeval::["{docname}{outfilesuffix}" == "chapter3.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+== §3.1 | Verification of Trigonometric Identities
+== §3.2 | Sum, Difference, and Cofunction Identities
+
+.Sum and Difference Identities
+****
+[latexmath]
+++++
+include::assets/sum-diff-ident.tex[]
+++++
+****
+
+
+.Cofunction Identities
+****
+[latexmath]
+++++
+include::assets/cofunction-ident.tex[]
+++++
+****
+
+== §3.3 | Double- and Half-Angle Identities
+
+.Double-Angle Identities
+****
+- **Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities.
+- The **Double-Angle Identities** are easy to derive from the **Sum and Difference Identities**.
+[latexmath]
+++++
+include::assets/double-angle-ident.tex[]
+++++
+****
+
+.Half-Angle Identities
+****
+**Remember for Exams.** The professor said this isn't given during the Exam, and that we need to know this, said this in the context of Double-Angle & Half-Angle Identities, she may have been talking about just the Double-Angle Identities.
+[latexmath]
+++++
+include::assets/half-angle-ident.tex[]
+++++
+**The choice of the plus or minus sign depends on the quadrant in which latexmath:[\frac{\alpha}{2}] lies.**
+****
+
+.Power-Reducing Identities
+****
+[latexmath]
+++++
+include::assets/power-reducing-ident.tex[]
+++++
+****
+
+== §3.4 | Identities Involving the Sum of Trigonometric Functions
+
+.Product-to-Sum Identities
+****
+++++
+include::assets/product-to-sum-ident.tex[]
+++++
+****
+
+.Sum-to-Product-Identities
+****
+++++
+include::assets/sum-to-product-ident.tex[]
+++++
+****
+
+== §3.5 | Inverse Trigonometric Functions
+
+
+== §3.6 | Trigonometric Equations

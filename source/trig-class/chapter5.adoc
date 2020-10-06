@@ -1,0 +1,12 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 5 | Complex Numbers
+
+ifeval::["{docname}{outfilesuffix}" == "chapter5.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]

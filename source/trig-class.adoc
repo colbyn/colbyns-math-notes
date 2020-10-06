@@ -1,0 +1,22 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+= Trigonometry (Class Notes)
+
+ifeval::["{docname}{outfilesuffix}" == "trig-class.html"]
+++++
+include::assets/navigation.htm[]
+++++
+endif::[]
+
+
+include::trig-class/chapter1.adoc[leveloffset=+1]
+include::trig-class/chapter2.adoc[leveloffset=+1]
+include::trig-class/chapter3.adoc[leveloffset=+1]
+include::trig-class/chapter4.adoc[leveloffset=+1]
+include::trig-class/chapter5.adoc[leveloffset=+1]
+include::trig-class/chapter6.adoc[leveloffset=+1]
+include::trig-class/chapter7.adoc[leveloffset=+1]
+
+
