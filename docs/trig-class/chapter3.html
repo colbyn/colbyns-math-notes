@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Chapter 5 | Applications of Integration</title>
+<title>Chapter 3 | Trigonometric Identities and Equations</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,15 +438,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Chapter 5 | Applications of Integration</h1>
+<h1>Chapter 3 | Trigonometric Identities and Equations</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_5_1_areas_between_curves">§5.1 | Areas Between Curves</a></li>
-<li><a href="#_5_2_volumes">§5.2 | Volumes</a></li>
-<li><a href="#_5_3_volumes_by_cylindrical_shells">§5.3 | Volumes by Cylindrical Shells</a></li>
-<li><a href="#_5_4_work">§5.4 | Work</a></li>
-<li><a href="#_5_5_average_value_of_a_function">§5.5 | Average Value of a Function</a></li>
+<li><a href="#_3_1_verification_of_trigonometric_identities">§3.1 | Verification of Trigonometric Identities</a></li>
+<li><a href="#_3_2_sum_difference_and_cofunction_identities">§3.2 | Sum, Difference, and Cofunction Identities</a></li>
+<li><a href="#_3_3_double_and_half_angle_identities">§3.3 | Double- and Half-Angle Identities</a></li>
+<li><a href="#_3_4_identities_involving_the_sum_of_trigonometric_functions">§3.4 | Identities Involving the Sum of Trigonometric Functions</a></li>
+<li><a href="#_3_5_inverse_trigonometric_functions">§3.5 | Inverse Trigonometric Functions</a></li>
+<li><a href="#_3_6_trigonometric_equations">§3.6 | Trigonometric Equations</a></li>
 </ul>
 </div>
 </div>
@@ -698,31 +699,173 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_1_areas_between_curves"><a class="anchor" href="#_5_1_areas_between_curves"></a>§5.1 | Areas Between Curves</h2>
+<h2 id="_3_1_verification_of_trigonometric_identities"><a class="anchor" href="#_3_1_verification_of_trigonometric_identities"></a>§3.1 | Verification of Trigonometric Identities</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_2_volumes"><a class="anchor" href="#_5_2_volumes"></a>§5.2 | Volumes</h2>
+<h2 id="_3_2_sum_difference_and_cofunction_identities"><a class="anchor" href="#_3_2_sum_difference_and_cofunction_identities"></a>§3.2 | Sum, Difference, and Cofunction Identities</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Sum and Difference Identities</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+
+    \cos(\alpha - \beta) &amp;= \cos(\alpha) \cdot \cos(\beta) + \sin(\alpha) \cdot \sin(\beta) \\
+    \cos(\alpha + \beta) &amp;= \cos(\alpha) \cdot \cos(\beta) - \sin(\alpha) \cdot \sin(\beta) \\
+
+    &amp;\\
+
+    \sin(\alpha - \beta) &amp;= \sin(\alpha) \cdot \cos(\beta) - \cos(\alpha) \cdot \sin(\beta) \\
+    \sin(\alpha + \beta) &amp;= \sin(\alpha) \cdot \cos(\beta) + \cos(\alpha) \cdot \sin(\beta) \\
+
+    &amp;\\
+
+    \tan(\alpha + \beta) &amp;= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) \cdot \tan(\beta)} \\
+    \tan(\alpha - \beta) &amp;= \frac{\tan(\alpha) - \tan(\beta)}{1 + \tan(\alpha) \cdot \tan(\beta)}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Cofunction Identities</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    \sin(\theta) &amp;= \cos(\frac{1}{4}\tau - \theta) \\
+    \cos(\theta) &amp;= \sin(\frac{1}{4}\tau - \theta) \\
+    \tan(\theta) &amp;= \cot(\frac{1}{4}\tau - \theta) \\
+    &amp;\\
+    \cot(\theta) &amp;= \tan(\frac{1}{4}\tau - \theta) \\
+    \csc(\theta) &amp;= \sec(\frac{1}{4}\tau - \theta) \\
+    \sec(\theta) &amp;= \csc(\frac{1}{4}\tau - \theta)
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_3_double_and_half_angle_identities"><a class="anchor" href="#_3_3_double_and_half_angle_identities"></a>§3.3 | Double- and Half-Angle Identities</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Double-Angle Identities</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Remember for Exams.</strong> The professor said this isn&#8217;t given during the Exam, and that we need to know this, said this in the context of Double-Angle &amp; Half-Angle Identities.</p>
+</li>
+<li>
+<p>The <strong>Double-Angle Identities</strong> are easy to derive from the <strong>Sum and Difference Identities</strong>.</p>
+</li>
+</ul>
+</div>
+\begin{equation}
+\begin{split}
+    \sin(2\alpha) &= 2\sin(\alpha)\cos(\alpha) \\
+    \cos(2\alpha) &= \cos^2(\alpha) - \sin^2(\alpha) \\
+                  &= 1 - 2\sin^2(\alpha) \\
+                  &= 2\cos^2(\alpha) - 1 \\
+    &\\
+    \tan(2\alpha) &= \frac{2\tan(\alpha)}{1 - \tan^2(\alpha)}
+\end{split}
+\end{equation}
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Half-Angle Identities</div>
+<div class="paragraph">
+<p><strong>Remember for Exams.</strong> The professor said this isn&#8217;t given during the Exam, and that we need to know this, said this in the context of Double-Angle &amp; Half-Angle Identities, she may have been talking about just the Double-Angle Identities.</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    \sin \frac{\alpha}{2} &amp;= \pm \sqrt{\frac{1 - \cos(\alpha)}{2}} \\
+    \cos \frac{\alpha}{2} &amp;= \pm \sqrt{\frac{1 + \cos(\alpha)}{2}} \\
+    \tan \frac{\alpha}{2} &amp;= \pm \sqrt{\frac{1 - \cos(\alpha)}{1 + \cos(\alpha)}}
+        = \frac{sin(\alpha)}{1 + \cos(\alpha)}
+        = \frac{1 - \cos(\alpha)}{sin(\alpha)}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+<div class="paragraph">
+<p><strong>The choice of the plus or minus sign depends on the quadrant in which \(\frac{\alpha}{2}\) lies.</strong></p>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Power-Reducing Identities</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    \sin^2(\alpha) &amp;= \frac{1 - \cos(2\alpha)}{2} \\
+    &amp;\\
+    \cos^2(\alpha) &amp;= \frac{1 + \cos(2\alpha)}{2} \\
+    &amp;\\
+    \tan^2(\alpha) &amp;= \frac{1 - \cos(2\alpha)}{1 + \cos(2\alpha)}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_4_identities_involving_the_sum_of_trigonometric_functions"><a class="anchor" href="#_3_4_identities_involving_the_sum_of_trigonometric_functions"></a>§3.4 | Identities Involving the Sum of Trigonometric Functions</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Product-to-Sum Identities</div>
+\begin{equation}
+\begin{split}
+    \sin(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) + \sin(\alpha - \beta) \Big] \\
+    \cos(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \sin(\alpha + \beta) - \sin(\alpha - \beta) \Big] \\
+    \cos(\alpha) \cdot \cos(\beta) &= \frac{1}{2} \Big[ \cos(\alpha + \beta) + \cos(\alpha - \beta) \Big] \\
+    \sin(\alpha) \cdot \sin(\beta) &= \frac{1}{2} \Big[ \cos(\alpha - \beta) - \cos(\alpha + \beta) \Big]
+\end{split}
+\end{equation}
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Sum-to-Product-Identities</div>
+\begin{equation}
+\begin{split}
+    \sin(x) + \sin(y) &= 2 \cdot \sin\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+    \cos(x) + \cos(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \cos\left( \frac{x - y}{2} \right) \\
+    \sin(x) - \sin(y) &= 2 \cdot \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right) \\
+    \cos(x) - \cos(y) &= -2 \sin \cos\left( \frac{x + y}{2} \right) \cdot \sin\left( \frac{x - y}{2} \right)
+\end{split}
+\end{equation}
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_5_inverse_trigonometric_functions"><a class="anchor" href="#_3_5_inverse_trigonometric_functions"></a>§3.5 | Inverse Trigonometric Functions</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_3_volumes_by_cylindrical_shells"><a class="anchor" href="#_5_3_volumes_by_cylindrical_shells"></a>§5.3 | Volumes by Cylindrical Shells</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_4_work"><a class="anchor" href="#_5_4_work"></a>§5.4 | Work</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_5_5_average_value_of_a_function"><a class="anchor" href="#_5_5_average_value_of_a_function"></a>§5.5 | Average Value of a Function</h2>
+<h2 id="_3_6_trigonometric_equations"><a class="anchor" href="#_3_6_trigonometric_equations"></a>§3.6 | Trigonometric Equations</h2>
 <div class="sectionbody">
 
 </div>
@@ -730,7 +873,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-06 11:49:56 -0600
+Last updated 2020-10-06 14:14:45 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">
