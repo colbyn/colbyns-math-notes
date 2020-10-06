@@ -472,10 +472,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_secant_line">Secant line</a></li>
 <li><a href="#_tangent">Tangent</a></li>
-<li><a href="#_intermediate_value_theorem">Intermediate Value Theorem</a></li>
-<li><a href="#_maximum_and_minimum_values_2">Maximum and Minimum Values</a></li>
-<li><a href="#_the_mean_value_theorem">The Mean Value Theorem</a></li>
+<li><a href="#_the_limit_of_a_function_1_5">The Limit of a Function (§1.5)</a></li>
+<li><a href="#_continuity_1_5">Continuity (§1.5)</a></li>
+<li><a href="#_maximum_and_minimum_values_3_1">Maximum and Minimum Values (§3.1)</a></li>
+<li><a href="#_the_mean_value_theorem_3_2">The Mean Value Theorem (§3.2)</a></li>
 <li><a href="#_how_derivatives_affect_the_shape_of_a_graph">How Derivatives Affect the Shape of a Graph</a></li>
+</ul>
+</li>
+<li><a href="#_solutions">Solutions</a>
+<ul class="sectlevel2">
+<li><a href="#_derivative_of_absolute_value_functions_scriptscriptstyle_fracmathrmdmathrmdx_lvert_x_rvert">Derivative of Absolute Value Functions (\({\scriptscriptstyle \frac{\mathrm{d}}{\mathrm{d}x}}\; \lvert x \rvert\))</a></li>
 </ul>
 </li>
 </ul>
@@ -568,6 +574,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
             {
                 name: 'Calculus - Definitions',
                 path: 'calc/definitions.html'
+            },
+            {
+                name: 'Calculus - Solutions',
+                path: 'calc/solutions.html'
             },
         ];
         let ul_node = document.querySelector("header#root > ul");
@@ -1007,7 +1017,51 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_intermediate_value_theorem"><a class="anchor" href="#_intermediate_value_theorem"></a>Intermediate Value Theorem</h3>
+<h3 id="_the_limit_of_a_function_1_5"><a class="anchor" href="#_the_limit_of_a_function_1_5"></a>The Limit of a Function (§1.5)</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Vertical Asymptote (Definition §1.5.6)</div>
+<div class="paragraph">
+<p>The vertical line \(x = a\) is called the <strong>vertical asymptote</strong> of the curve \(y = f(x)\) if at least one of the following statements is true:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    \lim_{x \to a} f(x) &amp;= \infty \\
+    \lim_{x \to a} f(x) &amp;= -\infty \\
+    \lim_{x \to a^{-}} f(x) &amp;= \infty \\
+    \lim_{x \to a^{-}} f(x) &amp;= -\infty \\
+    \lim_{x \to a^{+}} f(x) &amp;= \infty \\
+    \lim_{x \to a^{+}} f(x) &amp;= -\infty
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_continuity_1_5"><a class="anchor" href="#_continuity_1_5"></a>Continuity (§1.5)</h3>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">The Intermediate Value Theorem (IVT)</div>
+<div class="paragraph">
+<p>Suppose that \(f\) is continuous on the closed interval \(\lbrack a, b \rbrack\), and let N be any number between \(f(a)\) and \(f(b)\), where \(f(a) \neq f(b)\), then there exists a number \(c\) in \((a, b)\) such that \(f(c) = N\).</p>
+</div>
+<div class="paragraph">
+<p>Or alternatively, suppose \(f\) is a function that is continuous at every point in the interval \(\lbrack a, b \rbrack\):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f\) will take on every value between \(f(a)\) and \(f(b)\) over the interval.</p>
+</li>
+<li>
+<p>For any L between the values \(f(a)\) and \(f(b)\), there exists a number \(c\) in \(\lbrack a, b \rbrack\) for which \(f(c) = L\).</p>
+</li>
+</ul>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1015,19 +1069,91 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.</p>
+</li>
+<li>
+<p>The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values \(f(a)\) and \(f(b)\).</p>
+</li>
+<li>
+<p>The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
 </table>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.</p>
+<p>The IVT can be used to show that a root exists, if given some interval between \(a\) and \(b\):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(a)\) is negative</p>
+</li>
+<li>
+<p>\(f(b)\) is positive</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(a)\) is positive</p>
+</li>
+<li>
+<p>\(f(b)\) is negative</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>then therefore, if the function is continuous, then there must be a value for which some \(x\) in \(f(x) = 0\) exists. I.e. that a root exists. Which should make sense.</p>
+</div>
+<div class="paragraph">
+<p>More generally, this can be extended to any value between some interval. For instance, if:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(a) = 3\)</p>
+</li>
+<li>
+<p>\(f(b) = 9\)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then there must exist some value of \(x\) for which:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(x) = 6\)</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_maximum_and_minimum_values_2"><a class="anchor" href="#_maximum_and_minimum_values_2"></a>Maximum and Minimum Values</h3>
+<h3 id="_maximum_and_minimum_values_3_1"><a class="anchor" href="#_maximum_and_minimum_values_3_1"></a>Maximum and Minimum Values (§3.1)</h3>
 <div class="sect3">
 <h4 id="_the_extreme_value_theorem"><a class="anchor" href="#_the_extreme_value_theorem"></a>The extreme Value Theorem</h4>
 <div class="sidebarblock">
@@ -1080,9 +1206,6 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 <div class="paragraph">
 <p>A critical number of a function \(f\) is a number \(c\) in the domain of \(f\) such that either \(f^\prime(c) = 0\) or \(f^\prime(c)\) does not exist.</p>
 </div>
-<div class="paragraph">
-<p>To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. <strong>See The Closed Interval Method.</strong></p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1090,12 +1213,22 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Critical numbers</strong> of \(f\) occur when \(f^\prime(c) = 0\), or when \(f^\prime(c) = \mathrm{undefined}\).</p>
+</li>
+<li>
 <p>Not every critical number gives rise to a maximum or a minimum.</p>
+</li>
+</ul>
 </div>
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. <strong>See The Closed Interval Method.</strong></p>
 </div>
 </div>
 <div class="sect3">
@@ -1113,7 +1246,7 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>I.e. <strong>critical numbers</strong> of \(f\) occur when \(f^\prime(c) = 0\),</p>
+<p>I.e. <strong>critical numbers</strong> of \(f\) occur when \(f^\prime(c) = 0\), or when \(f^\prime(c) = \mathrm{undefined}\)</p>
 </li>
 </ul>
 </div>
@@ -1154,7 +1287,7 @@ A perpendicular makes an angle of 90° with a one dimensional LINE.</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_mean_value_theorem"><a class="anchor" href="#_the_mean_value_theorem"></a>The Mean Value Theorem</h3>
+<h3 id="_the_mean_value_theorem_3_2"><a class="anchor" href="#_the_mean_value_theorem_3_2"></a>The Mean Value Theorem (§3.2)</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1308,7 +1441,7 @@ f(b) - f(a) &amp;= f^\prime(c)(b - a)
 <h4 id="_miscellaneous"><a class="anchor" href="#_miscellaneous"></a>Miscellaneous</h4>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Theorem (5)</div>
+<div class="title">Theorem (§3.2.5)</div>
 <div class="paragraph">
 <p>If \(f^\prime(x) = 0\) for all x in an interval \((a, b)\), then f is constant on \((a, b)\).</p>
 </div>
@@ -1316,7 +1449,7 @@ f(b) - f(a) &amp;= f^\prime(c)(b - a)
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Corollary (7)</div>
+<div class="title">Corollary (§3.2.7)</div>
 <div class="paragraph">
 <p>if \(f^\prime(x) = g^\prime(x)\) for all \(x\) in an interval \((a, b)\), then \(f - g\) is constant on \((a, b)\); that is, \(f(x) = g(x) + c\) where \(c\) is a constant.</p>
 </div>
@@ -1480,10 +1613,28 @@ f(b) - f(a) &amp;= f^\prime(c)(b - a)
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_solutions"><a class="anchor" href="#_solutions"></a>Solutions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_derivative_of_absolute_value_functions_scriptscriptstyle_fracmathrmdmathrmdx_lvert_x_rvert"><a class="anchor" href="#_derivative_of_absolute_value_functions_scriptscriptstyle_fracmathrmdmathrmdx_lvert_x_rvert"></a>Derivative of Absolute Value Functions (\({\scriptscriptstyle \frac{\mathrm{d}}{\mathrm{d}x}}\; \lvert x \rvert\))</h3>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}
+\begin{split}
+    \lvert x \rvert &amp;= \sqrt{x^2} \neq x \\
+    {\scriptscriptstyle \frac{\mathrm{d}}{\mathrm{d}x}}\; \lvert x \rvert &amp;= \frac{x}{\lvert x \rvert} = \frac{\lvert x \rvert}{x}
+\end{split}
+\end{equation}\]
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-04 17:27:39 -0600
+Last updated 2020-10-05 18:00:46 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">
