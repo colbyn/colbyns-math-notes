@@ -1,0 +1,256 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 3 | Applications of Differentiation 
+
+ifeval::["{docname}{outfilesuffix}" == "chapter3.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+
+== §3.1 | Maximum and Minimum Values
+
+[NOTE]
+====
+- An 'extremum' (or extreme value) of a function is a point at which a **maximum** or **minimum** value of the function is obtained in some interval. **I.e. is not an alternative phrase for absolute maximum, but more generally refers to maximum or minimum points.**
+====
+
+
+
+=== The extreme Value Theorem
+
+.The extreme Value Theorem
+****
+If stem:[f] is continuous on a closed interval stem:[\lbrack a, b \rbrack], then stem:[f] attains an absolute maximum value stem:[f(c)] and an absolute minimum value stem:[f(d)] at some numbers stem:[c] and stem:[d] in stem:[\lbrack a, b \rbrack].
+
+[NOTE]
+====
+Functions continuous on a closed interval always attain extreme values.
+====
+****
+
+=== Fermat’s Theorem
+
+.Fermat’s Theorem
+****
+If stem:[f] has a local maximum or minimum at stem:[c], and if stem:[f^\prime(c)] exists, then stem:[f^\prime(c) = 0].
+****
+
+**In terms of critical numbers, Fermat’s Theorem can be rephrased as follows:**
+
+.Fermat’s Theorem (in terms of critical numbers)
+****
+If f has a local maximum or minimum at c, then c is a critical number of f.
+****
+
+=== Critical Number
+
+A critical number of a function stem:[f] is a number stem:[c] in the domain of stem:[f] such that either stem:[f^\prime(c) = 0] or stem:[f^\prime(c)] does not exist.
+
+[NOTE]
+====
+* *Critical numbers* of stem:[f] occur when stem:[f^\prime(c) = 0], or when stem:[f^\prime(c) = \mathrm{undefined}].
+* Not every critical number gives rise to a maximum or a minimum.
+====
+
+
+To find an absolute maximum or minimum of a continuous function on a closed interval, we note that either it is local [in which case it occurs at a critical number by (7)] or it occurs at an endpoint of the interval, as we see from the examples in Figure 8. Thus the following three-step procedure always works. **See The Closed Interval Method.**
+
+
+[#the-closed-interval-method]
+=== The Closed Interval Method
+
+.The Closed Interval Method
+****
+To find the absolute maximum and minimum values of a continuous function stem:[f] on a closed interval stem:[\lbrack a, b \rbrack]:
+
+1. Find the values of stem:[f] at the critical numbers of stem:[f] in stem:[(a, b)].
+    - I.e. *critical numbers* of stem:[f] occur when stem:[f^\prime(c) = 0], or when stem:[f^\prime(c) = \mathrm{undefined}]
+2. Find the values of stem:[f] at the endpoints of the interval.
+    - I.e. stem:[f(a)] and stem:[f(b)].
+3. The **largest** of the values from **Steps 1 and 2** is the absolute maximum value; the **smallest** of these values is the absolute minimum value.
+****
+
+I.e. the maximum/minimum of stem:[f^\prime(c) = 0], stem:[f(a)], and stem:[f(b)].
+
+Using sudo code, the <<The Closed Interval Method>> can be defined as the result of:
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+\mathrm{maximum} &= \mathrm{max}\lbrack f(a), f^\prime(c) = 0, f(b)\rbrack \\
+\mathrm{minimum} &= \mathrm{min}\lbrack f(a), f^\prime(c) = 0, f(b)\rbrack
+\end{split}
+\end{equation}
+++++
+
+== §3.2 | The Mean Value Theorem
+
+- https://www.dpmms.cam.ac.uk/~wtg10/meanvalue.html[What is the point of the mean value theorem?]
+- The mean value theorem says that the average speed of the car (the slope of the secant line) is equal to the instantaneous speed (slope of the tangent line) at some point(s) in the interval.
+
+[quote, 'https://en.wikipedia.org/wiki/Mean_value_theorem[Wikipedia:Mean_value_theorem]']
+____
+In mathematics, the mean value theorem states, roughly, that for a given planar arc between two endpoints, there is at least one point at which the tangent to the arc is parallel to the secant through its endpoints.
+____
+
+For any function that is continuous on  stem:[\lbrack a, b \rbrack] and differentiable on stem:[(a,b)], there exists some stem:[c] in the interval stem:[(a,b)] such that the secant joining the endpoints of the interval stem:[\lbrack a, b \rbrack] is parallel to the tangent at stem:[c]:
+
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Mvt2.svg/520px-Mvt2.svg.png[]
+
+[NOTE]
+====
+The function 
+f attains the slope of the secant between a and b as the derivative at the point stem:[{\displaystyle \xi \in (a,b)}]:
+
+image::https://upload.wikimedia.org/wikipedia/commons/9/94/Mittelwertsatz3.svg[]
+
+It is also possible that there are multiple tangents parallel to the secant:
+
+image::https://upload.wikimedia.org/wikipedia/commons/f/f9/Mittelwertsatz6.svg[]
+====
+
+
+We will see that many of the results of this chapter depend on one central fact, which is called the Mean Value Theorem. But to arrive at the Mean Value Theorem we first need the following result.
+
+.Rolle’s Theorem
+****
+Let f be a function that satisfies the following three hypotheses:
+
+1. stem:[f] is continuous on the closed interval stem:[\lbrack a, b \rbrack].
+2. stem:[f] is differentiable on the open interval stem:[(a, b)].
+3. stem:[f(a) = f(b)]
+    * I.e. the stem:[x_1] and stem:[x_2] map to the same stem:[y] value.
+
+Then there is a number stem:[c] in stem:[(a, b)], such that stem:[f^\prime(c) = 0]
+****
+
+
+.The Mean Value Theorem
+****
+Let stem:[f] be a function that satisfies the following hypotheses:
+
+1. stem:[f] is continuous on the closed interval stem:[\lbrack a, b \rbrack].
+2. stem:[f] is differentiable on the open interval stem:[(a, b)].
+
+Then there is a number stem:[c] in stem:[(a, b)], such that:
+
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+f^\prime(c) &= \frac{f(b) - f(a)}{b - a}
+\end{split}
+\end{equation}
+++++
+
+Or, equivalently:
+
+[latexmath]
+++++
+\begin{equation}
+\begin{split}
+f(b) - f(a) &= f^\prime(c)(b - a)
+\end{split}
+\end{equation}
+++++
+
+Where the tangent at stem:[c] is parallel to the secant line through the endpoints stem:[(a, f(a))] and stem:[(b, f(b))].
+****
+
+
+[NOTE]
+====
+The Mean Value Theorem is an example of what is called an existence theorem. Like the Intermediate Value Theorem, the Extreme Value Theorem, and Rolle’s Theorem, it guarantees that there exists a number with a certain property, but it doesn’t tell us how to find the number.
+====
+
+=== Miscellaneous
+
+.Theorem (§3.2.5)
+****
+If stem:[f^\prime(x) = 0] for all x in an interval stem:[(a, b)], then f is constant on stem:[(a, b)].
+****
+
+.Corollary (§3.2.7)
+****
+if stem:[f^\prime(x) = g^\prime(x)] for all stem:[x] in an interval stem:[(a, b)], then stem:[f - g] is constant on stem:[(a, b)]; that is, stem:[f(x) = g(x) + c] where stem:[c] is a constant.
+
+[NOTE]
+====
+Corollary 7 says that if two functions have the same derivatives on an interval, then their graphs must be vertical translations of each other there. In other words, the graphs have the same shape, but could be shifted up or down.
+====
+****
+
+
+== §3.3 | How Derivatives Affect the Shape of a Graph
+
+Many of the applications of calculus depend on our ability to deduce facts about a function f from information concerning its derivatives.
+
+Because stem:[f^\prime(x)] represents the slope of the curve stem:[y = f(x)] at the point stem:[(x, f(x))], it tells us the direction in which the curve proceeds at each point. So it is reasonable to expect that information about stem:[f^\prime(x)] will provide us with information about stem:[f(x)].
+
+=== What Does stem:[f^\prime] Say about stem:[f]?
+
+.Increasing/Decreasing Test
+****
+* If stem:[f^\prime(x) > 0] on an interval, then stem:[f(x)] is increasing on that interval.
+    - I.e. the tangent lines (in the stem:[f(x)] interval) have positive slope.
+* If stem:[f^\prime(x) < 0] on an interval, then stem:[f(x)] is decreasing on that interval.
+    - I.e. the tangent lines (in the stem:[f(x)] interval) have negative slope.
+****
+
+
+.The First Derivative Test
+****
+Suppose that c is a critical number of a continuous function f:
+
+- If stem:[f^\prime] changes from positive to negative at stem:[c], then stem:[f] has a local maximum at stem:[c].
+- If stem:[f^\prime] changes from negative to positive at stem:[c], then stem:[f] has a local minimum at stem:[c].
+- If stem:[f^\prime] is positive to the left and right of stem:[c], or negative to the left and right of stem:[c], then stem:[f] has no local maximum or minimum at stem:[c].
+****
+
+=== What Does stem:[f^{\prime\prime}] Say about stem:[f]?
+
+[IMPORTANT]
+====
+If the graph of f lies above all of its tangents on an interval I, then it is called concave upward on I. If the graph of f lies below all of its tangents on I, it is called concave downward on I.
+====
+
+
+.Concavity Test
+****
+- If stem:[f^{\prime\prime}(x) > 0] for all x in I, then the graph of stem:[f] is concave upward on I.
+- If stem:[f^{\prime\prime}(x) < 0] for all x in I, then the graph of stem:[f] is concave downward on I.
+****
+
+
+[IMPORTANT]
+====
+A point stem:[P] on a curve stem:[y = f(x)] is called an inflection point if stem:[f] is continuous there and the curve changes from concave upward to concave downward or from concave downward to concave upward at stem:[P].
+====
+
+
+.The Second Derivative Test
+****
+Suppose stem:[f^{\prime\prime}] is continuous near c:
+
+- If stem:[f^\prime(c) = 0] and stem:[f^{\prime\prime}(c) > 0], then stem:[f] has a local minimum at stem:[c].
+- If stem:[f^\prime(c) = 0] and stem:[f^{\prime\prime}(c) < 0], then stem:[f] has a local maximum at stem:[c].
+
+[NOTE]
+====
+The Second Derivative Test is inconclusive when stem:[f^{\prime\prime}(c) = 0]. In other words, at such a point there might be a maximum, there might be a minimum, or there might be neither (as in Example 6). This test also fails when stem:[f^{\prime\prime}(c)] does not exist. In such cases the First Derivative Test must be used. In fact, even when both tests apply, the First Derivative Test is often the easier one to use.
+====
+****
+
+
+== §3.4 | Limits at Infinity; Horizontal Asymptotes
+== §3.5 | Summary Curve Sketching
+== §3.6 | Calculus with Graphing Calculators (Skipped)
+== §3.7 | Optimization Problems
+== §3.8 | Newtons Method
+== §3.9 | Anti-Derivatives
+

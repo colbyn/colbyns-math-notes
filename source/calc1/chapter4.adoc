@@ -1,0 +1,21 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 4 | Integrals
+
+ifeval::["{docname}{outfilesuffix}" == "chapter4.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+
+== §4.1 | Areas and Distances
+== §4.2 | The Definite Integral
+== §4.3 | The Fundamental Theorem of Calculus
+== §4.4 | Indefinite Integrals and the Net Change Theorem
+== §4.5 | The Substitution Rule
+
+

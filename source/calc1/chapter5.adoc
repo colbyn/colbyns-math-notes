@@ -1,0 +1,19 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 5 | Applications of Integration
+
+ifeval::["{docname}{outfilesuffix}" == "chapter5.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+== §5.1 | Areas Between Curves
+== §5.2 | Volumes
+== §5.3 | Volumes by Cylindrical Shells
+== §5.4 | Work
+== §5.5 | Average Value of a Function
+

@@ -1,0 +1,119 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+
+= Chapter 1 | Functions and Limits
+
+ifeval::["{docname}{outfilesuffix}" == "chapter1.html"]
+++++
+include::../assets/navigation.htm[]
+++++
+endif::[]
+
+
+== §1.5 | The Limit of a Function
+
+.Vertical Asymptote (Definition §1.5.6)
+****
+The vertical line stem:[x = a] is called the **vertical asymptote** of the curve stem:[y = f(x)] if at least one of the following statements is true:
+
+[latexmath]
+++++
+include::assets/vertical-asymptote-cases.tex[]
+++++
+****
+
+
+== §1.6 | Calculating Limits Using the Limit Laws
+
+Suppose that stem:[c] is a constant and that the limits stem:[\lim_{x \to a} f(x)] and stem:[\lim_{x \to a} g(x)] exists, then:
+
+.Limit Laws
+****
+[latexmath]
+++++
+include::assets/limit-laws.tex[]
+++++
+****
+
+.Power Law
+****
+[latexmath]
+++++
+\lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n
+++++
+
+[WARNING]
+====
+stem:[n] must be a positive integer.
+====
+****
+
+.Root Law
+****
+[latexmath]
+++++
+\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}
+++++
+
+[WARNING]
+====
+stem:[n] must be a positive integer.
+====
+
+[TIP]
+====
+If stem:[n] is even, we assume that stem:[\lim_{x \to a} f(x) > 0].
+====
+****
+
+
+== §1.8 | Continuity
+
+.The Intermediate Value Theorem (IVT)
+****
+Suppose that stem:[f] is continuous on the closed interval stem:[\lbrack a, b \rbrack], and let N be any number between stem:[f(a)] and stem:[f(b)], where stem:[f(a) \neq f(b)], then there exists a number stem:[c] in stem:[(a, b)] such that stem:[f(c) = N].
+
+Or alternatively, suppose stem:[f] is a function that is continuous at every point in the interval stem:[\lbrack a, b \rbrack]:
+
+- stem:[f] will take on every value between stem:[f(a)] and stem:[f(b)] over the interval.
+- For any L between the values stem:[f(a)] and stem:[f(b)], there exists a number stem:[c] in stem:[\lbrack a, b \rbrack] for which stem:[f(c) = L].
+
+
+[NOTE]
+====
+- The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.
+- The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values stem:[f(a)] and stem:[f(b)]. 
+- The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.
+====
+
+[TIP]
+====
+The IVT can be used to show that a root exists, if given some interval between stem:[a] and stem:[b]: 
+
+- stem:[f(a)] is negative
+- stem:[f(b)] is positive
+
+or
+
+- stem:[f(a)] is positive
+- stem:[f(b)] is negative
+
+then therefore, if the function is continuous, then there must be a value for which some stem:[x] in stem:[f(x) = 0] exists. I.e. that a root exists. Which should make sense.
+
+**More generally**, this can be extended to any value between some interval. For instance, if:
+
+- stem:[f(a) = 3]
+- stem:[f(b) = 9]
+
+Then there must exist some value that we will call stem:[x], for which:
+
+- stem:[f(x) = 6]
+====
+****
+
+
+
+
+

@@ -1,0 +1,21 @@
+:sectanchors:
+:stem: latexmath
+:toc:
+
+= Calculus 1
+
+ifeval::["{docname}{outfilesuffix}" == "calc1.html"]
+++++
+include::assets/navigation.htm[]
+++++
+endif::[]
+
+
+include::calc1/chapter1.adoc[leveloffset=+1]
+include::calc1/chapter2.adoc[leveloffset=+1]
+include::calc1/chapter3.adoc[leveloffset=+1]
+include::calc1/chapter4.adoc[leveloffset=+1]
+include::calc1/chapter5.adoc[leveloffset=+1]
+include::calc1/chapter6.adoc[leveloffset=+1]
+
+
