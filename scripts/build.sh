@@ -23,7 +23,8 @@ BUILD_HTML=true
 
 if $BUILD_HTML; then
 echo "builing html"
-mkdir -p $OUT_DIR/config
+mkdir -p $OUT_DIR/static
+rsync --archive --recursive --update static $OUT_DIR
 bundle exec asciidoctor \
     -r asciidoctor-diagram \
     -D $OUT_DIR \
