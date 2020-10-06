@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Definitions</title>
+<title>Chapter 1 | Functions and Limits</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,12 +438,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Definitions</h1>
+<h1>Chapter 1 | Functions and Limits</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_secant_line">Secant line</a></li>
-<li><a href="#_tangent">Tangent</a></li>
+<li><a href="#_1_5_the_limit_of_a_function">§1.5 | The Limit of a Function</a></li>
+<li><a href="#_1_6_calculating_limits_using_the_limit_laws">§1.6 | Calculating Limits Using the Limit Laws</a></li>
+<li><a href="#_1_8_continuity">§1.8 | Continuity</a></li>
 </ul>
 </div>
 </div>
@@ -588,50 +589,229 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_secant_line"><a class="anchor" href="#_secant_line"></a>Secant line</h2>
+<h2 id="_1_5_the_limit_of_a_function"><a class="anchor" href="#_1_5_the_limit_of_a_function"></a>§1.5 | The Limit of a Function</h2>
 <div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Vertical Asymptote (Definition §1.5.6)</div>
 <div class="paragraph">
-<p>In geometry, a secant of a curve is a line that intersects the curve at a minimum of two distinct points.[1] The word secant comes from the Latin word secare, meaning to cut. In the case of a circle, a secant will intersect the circle at exactly two points.</p>
-</div>
-</blockquote>
-<div class="attribution">
-&#8212; <a href="https://en.wikipedia.org/wiki/Secant_line">Wikipedia:Secant_line</a>
-</div>
+<p>The vertical line \(x = a\) is called the <strong>vertical asymptote</strong> of the curve \(y = f(x)\) if at least one of the following statements is true:</p>
 </div>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
 \begin{split}
-    m &amp;= \frac{y_2 - y_1}{x_2 - x_1} \\
-      &amp;= \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+    \lim_{x \to a} f(x) &amp;= \infty \\
+    \lim_{x \to a} f(x) &amp;= -\infty \\
+    \lim_{x \to a^{-}} f(x) &amp;= \infty \\
+    \lim_{x \to a^{-}} f(x) &amp;= -\infty \\
+    \lim_{x \to a^{+}} f(x) &amp;= \infty \\
+    \lim_{x \to a^{+}} f(x) &amp;= -\infty
 \end{split}
 \end{equation}\]
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tangent"><a class="anchor" href="#_tangent"></a>Tangent</h2>
+<h2 id="_1_6_calculating_limits_using_the_limit_laws"><a class="anchor" href="#_1_6_calculating_limits_using_the_limit_laws"></a>§1.6 | Calculating Limits Using the Limit Laws</h2>
 <div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>In geometry, the tangent line (or simply tangent) to a plane curve at a given point is the straight line that "just touches" the curve at that point. Leibniz defined it as the line through a pair of infinitely close points on the curve. More precisely, a straight line is said to be a tangent of a curve y = f(x) at a point x = c on the curve if the line passes through the point (c, f(c)) on the curve and has slope f'(c), where f' is the derivative of f.</p>
+<p>Suppose that \(c\) is a constant and that the limits \(\lim_{x \to a} f(x)\) and \(\lim_{x \to a} g(x)\) exists, then:</p>
 </div>
-</blockquote>
-<div class="attribution">
-&#8212; <a href="https://en.wikipedia.org/wiki/Tangent">Wikipedia:Tangent</a>
-</div>
-</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Limit Laws</div>
 <div class="stemblock">
 <div class="content">
 \[\begin{equation}
 \begin{split}
-    y &amp;= f(a) + f^\prime(a)(x - a)
+    \lim_{x \to a} \Big[ f(x) + g(x) \Big] &amp;= \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \Big[ f(x) - g(x) \Big] &amp;= \lim_{x \to a} f(x) - \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \Big[ c \cdot f(x) \Big] &amp;= c \cdot \lim_{x \to a} f(x) \\
+    \lim_{x \to a} \Big[ f(x) \cdot g(x) \Big] &amp;= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
+    \lim_{x \to a} \frac{f(x)}{g(x)} &amp;= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a}g(x)} \; \text{if} \lim_{x \to a}g(x) \neq 0
 \end{split}
 \end{equation}\]
+</div>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Power Law</div>
+<div class="stemblock">
+<div class="content">
+\[\lim_{x \to a} \Big[ f(x) \Big]^n = \Big[ \lim_{x \to a} f(x) \Big]^n\]
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>\(n\) must be a positive integer.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Root Law</div>
+<div class="stemblock">
+<div class="content">
+\[\lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a} f(x)}\]
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>\(n\) must be a positive integer.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If \(n\) is even, we assume that \(\lim_{x \to a} f(x) &gt; 0\).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_8_continuity"><a class="anchor" href="#_1_8_continuity"></a>§1.8 | Continuity</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">The Intermediate Value Theorem (IVT)</div>
+<div class="paragraph">
+<p>Suppose that \(f\) is continuous on the closed interval \(\lbrack a, b \rbrack\), and let N be any number between \(f(a)\) and \(f(b)\), where \(f(a) \neq f(b)\), then there exists a number \(c\) in \((a, b)\) such that \(f(c) = N\).</p>
+</div>
+<div class="paragraph">
+<p>Or alternatively, suppose \(f\) is a function that is continuous at every point in the interval \(\lbrack a, b \rbrack\):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f\) will take on every value between \(f(a)\) and \(f(b)\) over the interval.</p>
+</li>
+<li>
+<p>For any L between the values \(f(a)\) and \(f(b)\), there exists a number \(c\) in \(\lbrack a, b \rbrack\) for which \(f(c) = L\).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The intermediate value theorem states that if a continuous function attains two values, it must also attain all values in between these two values.</p>
+</li>
+<li>
+<p>The Intermediate Value Theorem states that a continuous function takes on every intermediate value between the function values \(f(a)\) and \(f(b)\).</p>
+</li>
+<li>
+<p>The statement of the theorem has multiple requirements, all of which are necessary for the conclusion to hold.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The IVT can be used to show that a root exists, if given some interval between \(a\) and \(b\):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(a)\) is negative</p>
+</li>
+<li>
+<p>\(f(b)\) is positive</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(a)\) is positive</p>
+</li>
+<li>
+<p>\(f(b)\) is negative</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>then therefore, if the function is continuous, then there must be a value for which some \(x\) in \(f(x) = 0\) exists. I.e. that a root exists. Which should make sense.</p>
+</div>
+<div class="paragraph">
+<p><strong>More generally</strong>, this can be extended to any value between some interval. For instance, if:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(a) = 3\)</p>
+</li>
+<li>
+<p>\(f(b) = 9\)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then there must exist some value that we will call \(x\), for which:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\(f(x) = 6\)</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -639,7 +819,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-06 11:36:18 -0600
+Last updated 2020-10-06 11:58:22 -0600
 </div>
 </div>
 <script type="text/x-mathjax-config">
