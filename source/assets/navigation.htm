@@ -1,0 +1,242 @@
+<!-- WIP NEW NAVIGATION -->
+
+<style>
+    header#root {
+        border: 1px solid #000;
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    header#root > span {
+        border-bottom: 1px solid #000;
+        margin-bottom: 4px;
+        padding: 4px;
+    }
+
+    header#root ul {
+        display: flex;
+        flex-direction: column;
+        color: #000;
+
+        margin-left: 4px;
+        border-left: 1px solid #e0e0e0;
+        padding-left: 10px;
+    }
+    header#root ul > li {
+        display: flex;
+        color: inherit;
+        flex-direction: column;
+    }
+    header#root ul > li > a {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    header#root ul > li > a > span.suffix {
+        margin-right: 10px;
+        font-size: 0.8em;
+        font-weight: 100;
+
+        padding: 3px;
+        font-size: 0.3em;
+        text-decoration: none;
+        border: 1px solid #e0e0e0;
+        color: #191919;
+    }
+    header#root ul > li > a > span.chapter {
+        margin-right: 10px;
+        text-decoration: underline;
+    }
+    header#root ul > li > a > span.name {
+        text-decoration: underline;
+    }
+</style>
+
+<header id=root>
+    <span>Navigation</span>
+</header>
+
+<script>
+    function $(f) {
+        return f();
+    }
+    let menu = [
+        {
+            name: 'Homepage',
+            path: 'index.html'
+        },
+        {
+            name: 'Trigonometry',
+            path: 'trig.html'
+        },
+        {
+            name: 'Calculus',
+            path: 'calc.html',
+            sub: [
+                {
+                    name: 'Concepts',
+                    path: 'calc/concepts.html'
+                },
+                {
+                    name: 'Limits',
+                    path: 'calc/limits.html'
+                },
+                {
+                    name: 'Lines',
+                    path: 'calc/lines.html'
+                },
+                {
+                    name: 'Derivatives',
+                    path: 'calc/derivatives.html'
+                },
+                {
+                    name: 'Definitions',
+                    path: 'calc/definitions.html'
+                },
+                {
+                    name: 'Solutions',
+                    path: 'calc/solutions.html'
+                },
+            ]
+        },
+        {
+            name: 'Calculus 1',
+            suffix: 'Class Notes',
+            path: 'calc1.html',
+            sub: [
+                {
+                    name: 'Functions and Limits',
+                    chapter: '1',
+                    path: 'calc1/chapter1.html'
+                },
+                {
+                    name: 'Derivatives',
+                    chapter: '2',
+                    path: 'calc1/chapter2.html'
+                },
+                {
+                    name: 'Applications of Differentiation ',
+                    chapter: '3',
+                    path: 'calc1/chapter3.html'
+                },
+                {
+                    name: 'Integrals',
+                    chapter: '4',
+                    path: 'calc1/chapter4.html'
+                },
+                {
+                    name: 'Applications of Integration',
+                    chapter: '5',
+                    path: 'calc1/chapter5.html'
+                },
+                {
+                    name: 'Inverse Functions',
+                    chapter: '6',
+                    path: 'calc1/chapter6.html'
+                },
+            ]
+        },
+        {
+            name: 'Trigonometry',
+            suffix: 'Class Notes',
+            path: 'trig-class.html',
+            sub: [
+                {
+                    name: 'Functions and Graphs',
+                    chapter: '1',
+                    path: 'trig-class/chapter1.html'
+                },
+                {
+                    name: 'Trigonometric Functions',
+                    chapter: '2',
+                    path: 'trig-class/chapter2.html'
+                },
+                {
+                    name: 'Trigonometric Identities and Equations',
+                    chapter: '3',
+                    path: 'trig-class/chapter3.html'
+                },
+                {
+                    name: 'Applications of Trigonometry',
+                    chapter: '4',
+                    path: 'trig-class/chapter4.html'
+                },
+                {
+                    name: 'Complex Numbers',
+                    chapter: '5',
+                    path: 'trig-class/chapter5.html'
+                },
+                {
+                    name: 'Topics in Analytic Geometry',
+                    chapter: '6',
+                    path: 'trig-class/chapter6.html'
+                },
+                {
+                    name: 'Exponential and Logarithmic Functions',
+                    chapter: '7',
+                    path: 'trig-class/chapter6.html'
+                },
+            ]
+        },
+    ];
+    let host = window.location.host;
+    function get_link(ref_ref) {
+        let href = "";
+        if (host === "colbyn.github.io") {
+            href = `https://colbyn.github.io/colbyns-math-notes/${ref_ref}`;
+        } else {
+            href = `/${ref_ref}`;
+        }
+        return href;
+    }
+    function build_entry(entry) {
+        let host = window.location.host;
+        let node = document.createElement("li");
+        // LINK NODE
+        $(() => {
+            let link_node = document.createElement('a');
+            link_node.href = get_link(entry.path);
+            // SUFFIX
+            if ('suffix' in entry) {
+                let span_node = document.createElement('span');
+                span_node.className = "suffix";
+                span_node.textContent = entry.suffix;
+                link_node.appendChild(span_node);
+            }
+            // CHAPTER
+            if ('chapter' in entry) {
+                let span = document.createElement("span");
+                span.className = "chapter";
+                span.textContent = `Chapter ${entry.chapter}`;
+                link_node.appendChild(span);
+            }
+            // NAME
+            if ('name' in entry) {
+                let span = document.createElement("span");
+                span.className = "name";
+                span.textContent = entry.name;
+                link_node.appendChild(span);
+            }
+            node.appendChild(link_node);
+        });
+        // CHILD NODES
+        if ('sub' in entry) {
+            node.appendChild(build_entries(entry.sub));
+        }
+        // DONE
+        return node;
+    }
+    function build_entries(entries) {
+        let ul_node = document.createElement("ul");
+        for (entry of entries) {
+            ul_node.appendChild(build_entry(entry));
+        }
+        return ul_node;
+    }
+    // BUILD ROOT MENU
+    let root_ul_node = document.querySelector("header#root");
+    console.assert(root_ul_node);
+    root_ul_node.appendChild(build_entries(menu));
+</script>
