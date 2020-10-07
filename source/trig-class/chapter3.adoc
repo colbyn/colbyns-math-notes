@@ -80,6 +80,10 @@ include::assets/sum-to-product-ident.tex[]
 ++++
 ****
 
+
+///////////////////////////////////////////////////////////////////////////////
+// CHAPTER 3
+///////////////////////////////////////////////////////////////////////////////
 == §3.5 | Inverse Trigonometric Functions
 
 .Definition of stem:[\arcsin(x)]
@@ -97,8 +101,19 @@ where
 [latexmath]
 ++++
 -1 \leq x \leq 1 \\
--\frac{\pi}{2} \leq y \leq \frac{\pi}{2}
+-\frac{1}{4}\tau \leq y \leq \frac{1}{4}\tau
 ++++
+
+The graph of stem:[y=\sin\;x] with stem:[x] restricted to to stem:[\left\lbrack -\frac{\tau}{4},\frac{\tau}{4} \right\rbrack]:
+[tikz,"inverse-sin-graph",svg, preamble=true]
+----
+include::assets/inverse-sin-graph.tex[]
+----
+
+// [tikz,"arcsin-circle",svg, preamble=true]
+// ----
+// include::assets/arcsin-circle.tex[]
+// ----
 ****
 
 .Definition of stem:[\arccos(x)]
@@ -118,6 +133,19 @@ where
 -1 \leq x \leq 1 \\
 0 \leq y \leq \pi
 ++++
+
+The graph of stem:[y=\cos\;x] with stem:[x] restricted to to stem:[\left\lbrack 0,\frac{1}{2}\tau \right\rbrack]:
+
+[tikz,"inverse-cos-graph",svg, preamble=true]
+----
+include::assets/inverse-cos-graph.tex[]
+----
+
+
+[tikz,"arccos-circle",svg, preamble=true]
+----
+include::assets/arccos-circle.tex[]
+----
 ****
 
 
