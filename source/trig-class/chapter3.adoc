@@ -86,6 +86,8 @@ include::assets/sum-to-product-ident.tex[]
 ///////////////////////////////////////////////////////////////////////////////
 == §3.5 | Inverse Trigonometric Functions
 
+image:https://mathbooks.unl.edu/PreCalculus/images/imagesChap13/range-inverse-trig.png[]
+
 .Definition of stem:[\arcsin(x)]
 ****
 [latexmath]
@@ -109,11 +111,6 @@ The graph of stem:[y=\sin\;x] with stem:[x] restricted to to stem:[\left\lbrack 
 ----
 include::assets/inverse-sin-graph.tex[]
 ----
-
-// [tikz,"arcsin-circle",svg, preamble=true]
-// ----
-// include::assets/arcsin-circle.tex[]
-// ----
 ****
 
 .Definition of stem:[\arccos(x)]
