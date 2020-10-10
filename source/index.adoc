@@ -1,5 +1,7 @@
 = Colbyn's Math Notes
 
+Moved to https://github.com/colbyn/school-notes[https://github.com/colbyn/school-notes]
+
 .Locations
 ****
 |===

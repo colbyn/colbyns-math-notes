@@ -272,6 +272,22 @@ The Second Derivative Test is inconclusive when stem:[f^{\prime\prime}(c) = 0]. 
 
 
 == §3.4 | Limits at Infinity; Horizontal Asymptotes
+
+[WARNING]
+====
+
+**The professor said:** you can't just apply the limit laws,
+such as for:
+
+[latexmath]
+++++
+\lim_{x \to \infty} \frac{x^2 + 3x + 5}{x^3 + 3x + 5}
+++++
+
+Because we don't know if it is continuous.
+
+====
+
 == §3.5 | Summary Curve Sketching
 == §3.6 | Calculus with Graphing Calculators (Skipped)
 == §3.7 | Optimization Problems
